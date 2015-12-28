@@ -1,0 +1,25 @@
+@startuml
+title Usecase Diagramm NFC Tagger \n
+left to right direction
+
+:Nutzer 1: as user1
+:Nutzer 2: as user2
+(Kontakte schreiben) as (write)
+(Kontakte lesen) as (read)
+
+user1 --> (write)
+user1 --> (read)
+
+(write) ..> (Schreibe auf NFC-Chip) :includes
+(write) ..> (Schreibe in Adressbuch) :includes
+(write) ..> (Sende zu Android Beam):includes
+
+(read) ..> (Lesen aus Adressbuch) :includes
+(read) ..> (Lesen von NFC-Chip) :includes
+(read) ..> (Lesen von Android Beam) :includes
+
+(read) <.> (write) :extends
+
+(Lesen von Android Beam) <--> user2
+(Sende zu Android Beam) <--> user2
+@enduml

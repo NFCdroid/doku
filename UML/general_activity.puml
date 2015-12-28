@@ -1,0 +1,48 @@
+@startuml
+title Aktivitätsdiagramm NFC Tagger\n
+
+start
+:Starte App;
+repeat
+:Wähle Aktion;
+if ("KONTAKT IMPORT" gewählt) then (ja)
+    :Addressbuch einlesen;
+    :Addressbuch anzeigen;
+    :Kontakt auswählen;
+    :Kontakt in Main Activity anzeigen;
+elseif ("KONTAKT EXPORT" gewählt) then (ja)
+    :Lies Kontakt aus Main Activity;
+    :Übergebe Intent mit Kontakt an Android;
+elseif ("V-CARD ERSTELLEN" gewählt) then (ja)
+    if (Kontakt bereits in Main Activity) then (ja)
+        :Übernehme Kontaktdaten
+        aus Main Activity;
+    else (nein)
+    endif
+    :Editiere Kontaktfelder;
+    :Schreibe Kontakt auf NFC-Karte;
+elseif ("ANDROID BEAM" gewählt) then (ja)
+    if (Überprüfe Beam-Status) then (aktiviert)
+            :Sende Kontakt an Beam;
+            :Übertrage Kontakt durch Antippen;
+    else (deaktiviert)
+        :Leite weiter zu Beam-Einstellung;
+        :Prüfe erneut auf Android Beam;
+    endif
+elseif ("Einstellungen" gewählt) then (ja)
+    if (Vibration an/aus) then (ja)
+        :Aktiviere Vibration;
+    else (nein)
+        :Deaktiviere Vibration;
+    endif
+    if (Sprachausgabe an/aus) then (ja)
+        :Aktiviere Sprachausgabe;
+    else (nein)
+        :Deaktiviere Sprachausgabe;
+    endif
+else (Keine Aktion)
+endif
+repeat while (Weitere Aktionen?)
+:Beende App;
+stop
+@enduml
