@@ -3,12 +3,18 @@
 Hier wird die Dokumentation gepflegt.
 
 ## TODO
-- [ ] Anwenderdoku erstellen
+- [ ] Einführung/Motivation -> @zottelbeyer
+- [ ] technische Einordnung
+- [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen), [SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
+- [ ] Überblick über Ablauf der Implementierung (Extreme Programming)
+- [ ] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
 - [x] Klassendoku erstellen
-- [x] UML-Diagramme erstellen
-- [ ] Fehler- und Problembetrachtung
-- [ ] Einführung/Motivation
-- [x] Projektbericht erstellen?
+- [x] UML-Diagramme erstellen (Check, bis auf Klassendiagramm) -> @ohli
+- [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
+- [ ] GitHub-Bericht rauskloppen? -> @ohli
+- [ ] Links zu Source und App
+- [ ] Fehler- und Problembetrachtung -> @ohli @MarkoKle
+- [x] Auflistung der Arbeitsanteile (siehe Klassendoku)
 - [ ] Präsentation vorbereiten
 
 ----
