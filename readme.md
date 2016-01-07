@@ -5,16 +5,16 @@ Hier wird die Dokumentation gepflegt.
 ## TODO
 - [ ] Einführung/Motivation -> @zottelbeyer
 - [ ] technische Einordnung
-- [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen), [SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
-- [ ] Überblick über Ablauf der Implementierung (Extreme Programming)
+- [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen),[SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
+- [ ] Überblick über Ablauf der Implementierung (Extreme Programming, Einsatz von GitHub-Issues) -> @ohli
 - [ ] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
-- [x] Klassendoku erstellen
-- [x] UML-Diagramme erstellen (Check, bis auf Klassendiagramm) -> @ohli
+- [x] Klassendoku erstellen -> @ohli
+- [x] UML-Diagramme erstellen -> @ohli
 - [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
-- [ ] GitHub-Bericht rauskloppen? -> @ohli
+- [x] GitHub-Bericht rauskloppen (doku/gitstats) -> @ohli
 - [ ] Links zu Source und App
 - [ ] Fehler- und Problembetrachtung -> @ohli @MarkoKle
-- [x] Auflistung der Arbeitsanteile (siehe Klassendoku)
+- [x] Auflistung der Arbeitsanteile (siehe Klassendoku / Projektplan)
 - [ ] Präsentation vorbereiten
 
 ----
@@ -44,7 +44,7 @@ Die Formalitäten dann am Ende.
 ### text - Fließtext als Markdown-Dateien
 Hier liegen alle weiteren Dokutexte als einfache Textdatei in Markdown-Syntax vor (ja, Latex geht auch, ist hier aber übertrieben).  
 Doxygen erkennt hierbei automatisch die Hierarchie, also einfach Überschriftenklasse mittels '#' bestimmen und ggf. die labelids in {} dahinter setzen, siehe auch:
-[doxygen-Markdown-Doku](http://www.stack.nl/~dimitri/doxygen/manual/markdown.html) und  [Markdow-Doku](http://daringfireball.net/projects/markdown/syntax)
+[doxygen-Markdown-Doku](http://www.stack.nl/~dimitri/doxygen/manual/markdown.html) und  [Markdown-Doku](http://daringfireball.net/projects/markdown/syntax)
 
 
 ### UML - mittels PlantUML erstellte UML-Diagramme
