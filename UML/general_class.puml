@@ -1,0 +1,51 @@
+@startuml
+title Klassendiagramm NFC Tagger
+
+class activity.CreateVCardActivity
+class activity.MainActivity
+class addons.Vibration
+class addons.Voice
+class addressbookwork.AddressBookReader
+class addressbookwork.AddressBookWriter
+class cardwork.CardReader
+class cardwork.CardWriter
+class dialogs.ContactListDialog
+class dialogs.SettingsDialog
+class tools.ContactTools
+class tools.DataWork
+class tools.NfcTools
+class tools.VCardFormatTools
+
+activity.CreateVCardActivity ..> addons.Vibration
+activity.CreateVCardActivity ..> addons.Voice
+activity.CreateVCardActivity ..> cardwork.CardWriter
+activity.CreateVCardActivity ..> tools.VCardFormatTools
+activity.MainActivity ..> addons.Vibration
+activity.MainActivity ..> addons.Voice
+activity.MainActivity ..> addressbookwork.AddressBookWriter
+activity.MainActivity ..> cardwork.CardReader
+activity.MainActivity ..> cardwork.CardWriter
+activity.MainActivity ..> dialogs.ContactListDialog
+activity.MainActivity ..> dialogs.SettingsDialog
+activity.MainActivity ..> tools.ContactTools
+activity.MainActivity ..> tools.DataWork
+activity.MainActivity ..> tools.NfcTools
+activity.MainActivity ..> tools.VCardFormatTools
+addressbookwork.AddressBookReader ..> activity.MainActivity
+addressbookwork.AddressBookReader ..> addons.Vibration
+addressbookwork.AddressBookReader ..> addons.Voice
+addressbookwork.AddressBookReader ..> dialogs.ContactListDialog
+addressbookwork.AddressBookReader ..> tools.VCardFormatTools
+cardwork.CardReader ..> addons.Voice
+cardwork.CardWriter ..> addons.Voice
+dialogs.ContactListDialog ..> activity.MainActivity
+dialogs.ContactListDialog ..> addons.Vibration
+dialogs.ContactListDialog ..> addressbookwork.AddressBookReader
+dialogs.SettingsDialog ..> activity.MainActivity
+dialogs.SettingsDialog ..> addons.Vibration
+dialogs.SettingsDialog ..> addons.Voice
+tools.ContactTools ..> activity.MainActivity
+tools.ContactTools ..> addons.Voice
+tools.NfcTools ..> activity.MainActivity
+tools.NfcTools ..> addons.Voice
+@enduml
