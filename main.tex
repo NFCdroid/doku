@@ -1,0 +1,145 @@
+\documentclass[a4paper,ngerman,12pt]{scrreprt}
+
+\usepackage[ngerman]{babel}
+%Deutsche Anführungszeichen
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{eurosym}
+\usepackage{lmodern}
+\usepackage{hyperref}
+%pdf einbinden
+\usepackage{pdfpages}
+
+%Bibliographie einbinden
+\usepackage[bibstyle=numeric,citestyle=authoryear,backend=biber]{biblatex}
+\bibliography{mobileapps.bib}
+
+%Glossar einbinden
+\usepackage[acronym,acronymlists={main}]{glossaries}
+\makeglossaries
+	\setacronymstyle{footnote}
+	\newacronym{LMS}{LMS}{Learning Management System}
+	\newacronym{SCORM}{SCORM}{Sharable Content Object Reference Model}
+	\newacronym{LOM}{LOM}{Learning Objects Metadata}
+	\newacronym{SSL}{SSL}{SSL-Verschlüsselung -- Secure Sockets Layer}
+	\newacronym{LAMPP}{LAMPP}{Webserver bestehend aus: Linux, Apache, MySQL, PHP und Perl}
+	\newacronym{responsive Design}{Responsive Design}{Gestalterisches und technisches Paradigma zur Erstellung von Internetseiten, so dass diese Seiten auf die jeweiligen Geräte des Nutzers (speziell Smartphones und Tablets) reagieren können}
+%Für maketitle
+\title{Mobile Applications}
+\author{
+	Oliver Friedrich
+	\and Marko Klepatz
+	\and Klaus Steinhauer
+    }
+
+\date{\today}
+\begin{document}
+%opening
+\begin{titlepage}
+	\begin{center}
+	
+	\textsc{\large Deutsche Telekom Hochschule für Telekommunikation Leipzig}
+	\\[2cm]
+	{\Large Beleg zum Modul Mobile Applications}
+	\\[1cm]
+		\begin{minipage}{0.2\textwidth}
+		\begin{flushleft}
+		{\footnotesize Thema}
+		\end{flushleft}
+		\end{minipage}
+		 \hfill
+		\begin{minipage}{0.75\textwidth}
+		\begin{flushleft}
+		\textbf{{\Large NFC APP .... //TODO: genauer titel}}
+		\end{flushleft}
+		 \end{minipage}
+		\\[2cm]
+		\begin{minipage}{0.2\textwidth}
+		\begin{flushleft}
+		{\footnotesize vorgelegt von}
+		\end{flushleft}
+		\end{minipage}
+		 \hfill
+		\begin{minipage}{0.75\textwidth}
+		\begin{flushleft}
+		{\normalsize
+			Oliver Friedrich
+			\\Marko Klepatz
+			\\Klaus Steinhauer}
+		\end{flushleft}
+		 \end{minipage}
+		 \\[2cm]
+		 \begin{minipage}{0.2\textwidth}
+		 \begin{flushleft}
+		 {\footnotesize Betreuer}
+		 \end{flushleft}
+		 \end{minipage}
+	  \hfill
+	   \begin{minipage}{0.75\textwidth}
+	  		 \begin{flushleft}
+	  		 {\normalsize
+	  		 		Prof. Dr. rer. nat. Ulf Schemmert
+	  		 }
+	  		 \end{flushleft}
+	  		  \end{minipage}
+	  		  \vfill
+	 \renewcommand*{\dictumwidth}{.6\textwidth}
+	 \dictum[Klaus]{
+	 ''Einmal mit Profis arbeiten...''
+	 } 	
+	
+	%\maketitle
+	\end{center}
+\end{titlepage}
+
+\begingroup
+\renewcommand*{\chapterpagestyle}{empty}
+\pagestyle{empty}
+\tableofcontents
+\clearpage
+\endgroup
+
+\chapter{Einleitung}
+
+
+\chapter{Struktur}
+ 
+\begin{quote}
+	''Haha! du Schuft!''
+\end{quote}
+
+\chapter{Node Rocks!}
+
+\section{Motivation}
+
+\begin{itemize}
+\item Item Sample
+\item All your Items are belong to us!
+\end{itemize}
+
+\section{Entwicklung}
+
+
+
+
+\chapter{Fazit}
+Weil wir nix können.
+
+\begingroup
+\let\clearpage\relax
+\chapter{Anhang}
+\printbibliography
+%\printglossaries
+\endgroup
+\vfill
+
+\section*{Selbstständigkeitserklärung}
+Hiermit erklären wir, dass wir die von uns an der Deutschen Telekom Hochschule für Telekommunikation Leipzig eingereichte Belegarbeit zum Thema\\[1cm]
+\centering \\[1cm]
+selbständig verfasst und keine anderen als die angegebenen Hilfsmittel benutzt haben.
+\\[1.5cm]
+\flushleft Leipzig, den \today
+\end{document}
