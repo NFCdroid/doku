@@ -1,0 +1,2 @@
+# Einleitung 
+Bis zur Abgabe des Projektes zum Ende des WS 2015/16  soll eine App Programiert werden die Kontakte aus Android oder von einer Eingabemaske einlesen und auf eine NFC Karte speichern, sowie von der Karte lesen und in den Android Kontakten speichern kann. Zusätzlich sollen die Kontaktinformationen direkt zwischen zwei NFC fähigen Geräten kontaktlos ausgetauscht werden können. Dafür soll eine übersichtliche Oberfläche [mit maximal WAS?] erstellt werden und eine Hilfe für den Nutzer zur Verfügung stehen [MANUAL].
