@@ -1,0 +1,183 @@
+digraph lattice {
+n4cfeadebf3911c3f3f82b9f0c723413d5395b9b9 [shape=Mrecord, style=filled, label="{4cfeade 2016-01-07|Oliver Friedrich:Prepared folder}"]
+n7ce109d79d379428be3ff45c585f21ab4576bd22 [shape=Mrecord, style=filled, label="{7ce109d 2016-01-05|Oliver Friedrich:Typos..}"]
+n40ef84d2b57d6fd33144cd50beb1e929d6d4f7e4 [shape=Mrecord, style=filled, label="{40ef84d 2016-01-05|Oliver Friedrich:Merge remote-tracking branch 'origin/master'}"]
+n443d10dae8af8730ba04893f4ae55776668c507c [shape=Mrecord, style=filled, label="{443d10d 2016-01-05|Oliver Friedrich:Fixed \(hopefully\) all typos in the javadoc comments}"]
+n59902338dd5f6bb6dae5fac699700f57a13d3f60 [shape=Mrecord, style=filled, label="{5990233 2016-01-04|Marko Klepatz:Java Doc Rechtschreibungskorrektur}"]
+nc581f0efa9d8180007a48d4591e1d62c4027cc42 [shape=Mrecord, style=filled, label="{c581f0e 2016-01-04|Marko Klepatz:Java Doc Nachträge}"]
+n676b12721311d79419a55c8d02c020b45bfb8d89 [shape=Mrecord, style=filled, label="{676b127 2016-01-04|Marko Klepatz:Java Doc Nachträge}"]
+ne102a91b238814156de6eefef95dc7ff31654d81 [shape=Mrecord, style=filled, label="{e102a91 2016-01-03|Marko Klepatz:Java Doc finished.}"]
+n6bd35939ecae45157619f7776bd996991c6f5a6a [shape=Mrecord, style=filled, label="{6bd3593 2016-01-03|Marko Klepatz:Erste hälfte Java Doc und letzte Refactoring Arbeiten.}"]
+n69051db9dd6dbd2ab951b9acacafb41462c01bf0 [shape=Mrecord, style=filled, label="{69051db 2015-12-20|Marko Klepatz:Bugfixes, Clean Code und Refactoring. Nullpointer beim fehlerhaften auslesen einer Karte gefixt.}"]
+nc7303ad015c76e99df0abd79419c1156ef53b5cd [shape=Mrecord, style=filled, label="{c7303ad 2015-12-19|Oliver Friedrich:Icon und Name geändert.}"]
+nb08d82f92301653a8b8fff7ee27c47253b90b297 [shape=Mrecord, style=filled, label="{b08d82f 2015-12-19|Oliver Friedrich:Icon und Name geändert.}"]
+n4df288480ce988243a7faa72574ce2419834af9b [shape=Mrecord, style=filled, label="{4df2884 2015-12-18|Marko Klepatz:BÄÄÄÄMMM!! Doppelter App Aufruf gekill! Es war nicht der Verdammte MimmeType!}"]
+n203df5269f8516f5d54229a503fac304ff44ee2d [shape=Mrecord, style=filled, label="{203df52 2015-12-17|Klaus Steinhauer:On Export you can now choose to edit a given contact or create a new one.}"]
+n576f52e1a245e9773fc8523b0da3c77beb438816 [shape=Mrecord, style=filled, label="{576f52e 2015-12-16|Oliver Friedrich:Falsche Sprachansage gefixt. Nun redet sie nicht mehr von Beam sondern von NFC :-\) ..und noch eine verwirrende gitignore weg.}"]
+nbb05df43cb1ed5e386338ba19f9c3baf2e352d71 [shape=Mrecord, style=filled, label="{bb05df4 2015-12-16|Oliver Friedrich:Aufrufen mehrerer Instanzen gefixt. Nun bleibt die App auch bei der Reaktion auf NFC Events in der jeweiligen Activity}"]
+ne0972ce5ed01a115de8a90b144a6712d5aad996c [shape=Mrecord, style=filled, label="{e0972ce 2015-12-16|Marko Klepatz:Neue Features und EasterEgg hinzugefügt. +Refacroring}"]
+ne4a7017872c80dce31fa863f2982363877c77cfd [shape=Mrecord, style=filled, label="{e4a7017 2015-12-16|Marko Klepatz:Layout von CreateVCard optimiert.}"]
+n9f94349f56a511775636e90259fbec1c72b3cdd5 [shape=Mrecord, style=filled, label="{9f94349 2015-12-16|Marko Klepatz:Bugfix und Layoutkorrektur, HINWEIS}"]
+ncae43e9f703559f3d9d000a23ab966ceab0e1e26 [shape=Mrecord, style=filled, label="{cae43e9 2015-12-15|Marko Klepatz:Refactoring erstmal soweit durch, jetzt bugs finden und killen!}"]
+n155f6c61bacfe62e967757f109cf1d36b74c7771 [shape=Mrecord, style=filled, label="{155f6c6 2015-12-15|Marko Klepatz:Es spricht :D}"]
+n93e99d02b5c5bcd5eec006e7de88956e68aa407b [shape=Mrecord, style=filled, label="{93e99d0 2015-12-15|Marko Klepatz:Bugfix:}"]
+nba98e5a4813de7e81e0a2ff63274fade6dd324b5 [shape=Mrecord, style=filled, label="{ba98e5a 2015-12-15|Marko Klepatz:Bugfix und HINWEIS}"]
+nbd65c5574c6ef1d9c88834de8fe5143c55c032db [shape=Mrecord, style=filled, label="{bd65c55 2015-12-15|Marko Klepatz:Settings werden nun gespeichert und beim neustarten geladen.}"]
+ne87747d47065f9a02c7478b5357ac4f3ece08054 [shape=Mrecord, style=filled, label="{e87747d 2015-12-15|Marko Klepatz:SettingsDialog nun auch optisch und funktional implementiert. Settings XML erstellt. Neues Package addons erstellt. Vibration und Voice in addons verschoben.}"]
+nd37f131f1fc9f876bf361925c66a4237298fdc9a [shape=Mrecord, style=filled, label="{d37f131 2015-12-15|Oliver Friedrich:App für Kontakte-teilen registriert.}"]
+n2921a662acaff5e056220021355f09a34208b2be [shape=Mrecord, style=filled, label="{2921a66 2015-12-15|Klaus Steinhauer:fixed VCardFormatTool to produce cardContent with fixed position for values. removes Arrayoutofbound problems. fixes #1 #5}"]
+n5b7d97d2943714309cf4b88fcead160d8f7556ff [shape=Mrecord, style=filled, label="{5b7d97d 2015-12-15|Marko Klepatz:Es wächst :D}"]
+n0e2c0cb1ce32fb5f71a2a902e5485410f517c7d5 [shape=Mrecord, style=filled, label="{0e2c0cb 2015-12-15|Marko Klepatz:DataWork Class implementiert. SettingsDialog implementiert. Methoden für Menü Aufruf--\> Einstellungen in MainActivity implementiert. Menü XML implentiert.}"]
+n1d709616a1f60ac875977a1eb56b6509d256d4a4 [shape=Mrecord, style=filled, label="{1d70961 2015-12-14|Marko Klepatz:TextToSpeech implementiert :P}"]
+n807d1b65ffbaeadf0eb5aecd688afba8ee932068 [shape=Mrecord, style=filled, label="{807d1b6 2015-12-14|Marko Klepatz:Vibration fixed.}"]
+n2aadbee7e277eedc0594a2f1fe26d8b21245f2ff [shape=Mrecord, style=filled, label="{2aadbee 2015-12-14|Klaus Steinhauer:removed dev logs}"]
+n249b6b9d407e0e05418f1162974cd8ceeb6b5c73 [shape=Mrecord, style=filled, label="{249b6b9 2015-12-14|Oliver Friedrich:Prüfung für Beam hinzugefügt.}"]
+n1adbefa7c602ae104819f7bb62c55c8dbadb914d [shape=Mrecord, style=filled, label="{1adbefa 2015-12-14|Klaus Steinhauer:ContactWrite quick&dirty implementation}"]
+n861cfba2d367eb171078f6c8bd5d69aef58ca9fd [shape=Mrecord, style=filled, label="{861cfba 2015-12-14|Klaus Steinhauer:Button wieder einfügen}"]
+n42b7baa862ad0469c19c79d89d7cb6a2cccab60f [shape=Mrecord, style=filled, label="{42b7baa 2015-12-14|Marko Klepatz:Dialog bug!}"]
+nec58ab5a6783a898ee30dfb7f19b85616cb5a301 [shape=Mrecord, style=filled, label="{ec58ab5 2015-12-14|Marko Klepatz:R bug killed!}"]
+nb90299790d02266c3fd9c693e40c3719ed73e017 [shape=Mrecord, style=filled, label="{b902997 2015-12-14|Marko Klepatz:Refactoring Class MainActivity}"]
+n66bef77331b968c3a441df8bcf2c50f580cc99c4 [shape=Mrecord, style=filled, label="{66bef77 2015-12-14|Klaus Steinhauer:fix error}"]
+n8de48692f6fc337023f69639d492b29cee31e463 [shape=Mrecord, style=filled, label="{8de4869 2015-12-14|Klaus Steinhauer:First Commit of contactwrite - not tested yet.}"]
+n0ce45f2d9239cbba9179cf0f968f7740f2abf50b [shape=Mrecord, style=filled, label="{0ce45f2 2015-12-14|Klaus Steinhauer:Merge remote-tracking branch 'origin/master'}"]
+nee1e2b707f8910463da4691a7cbf76e4e77f5d4b [shape=Mrecord, style=filled, label="{ee1e2b7 2015-12-14|Klaus Steinhauer:First Commit of contactwrite - not tested yet.}"]
+neffba9e10c4f2ac202f55c1f6c69573b48cf3b3f [shape=Mrecord, style=filled, label="{effba9e 2015-12-14|Marko Klepatz:Refactoring Class ContactListDialog.}"]
+n4ba048a9a1a359cb674350057c20277f276ea1d9 [shape=Mrecord, style=filled, label="{4ba048a 2015-12-14|Marko Klepatz:Durch ContactListDialog ausgewählter Kontakt wird nun in MainActivity angezeigt und bei VCard erstellen mit in zugehörige Activity übertragen.}"]
+n15eab1f49d33783ab569d05dd375aa4453c91df3 [shape=Mrecord, style=filled, label="{15eab1f 2015-12-14|Marko Klepatz:Fusion finished.}"]
+nba3e47b62a8536164799aac68693e2856eb18b81 [shape=Mrecord, style=filled, label="{ba3e47b 2015-12-13|Marko Klepatz:Merge remote-tracking branch 'origin/master'}"]
+nbba806dd589b6110dd9c44de551b07a2c7c7a9c8 [shape=Mrecord, style=filled, label="{bba806d 2015-12-13|Marko Klepatz:Refactoring}"]
+n98d799d770e5af20e7f9e043a773f94dec775c01 [shape=Mrecord, style=filled, label="{98d799d 2015-12-13|Klaus Steinhauer:added email}"]
+na843c3175e159144a193850f85129c9c26f80101 [shape=Mrecord, style=filled, label="{a843c31 2015-12-12|Klaus Steinhauer:fixed nullpointer exception when getting numbers.}"]
+n95eec6f9e3c70ac60d59e55dd2cba302597b620e [shape=Mrecord, style=filled, label="{95eec6f 2015-12-12|Marko Klepatz:Merge remote-tracking branch 'origin/master'}"]
+n531f9532f959db2c3bd190d7b9c9235d1ac33c6e [shape=Mrecord, style=filled, label="{531f953 2015-12-12|Marko Klepatz:ReadContactsActivitys in Manifest registriert. Kleine Fehler in Kontaktauslesemthode entdeckt: Strings müssen noch eine Instanz höher oder Klasseneigenschaften zugewiesen werden, sonst unten Nullpointer bzw. alle Daten NULL weil nie erreicht. Exception: Mobilnummer nicht gefunden.}"]
+n203a078eef84d43f66138cab78abf2b713682ec1 [shape=Mrecord, style=filled, label="{203a078 2015-12-12|Marko Klepatz:Code Fusion steht an.}"]
+nd86edc2b7c23777a2c18add873deaba16fc5e9de [shape=Mrecord, style=filled, label="{d86edc2 2015-12-12|Klaus Steinhauer:added ReadContactsActivity to manifest to fix crash.}"]
+n8ceff13e159b00cfcbebe04dd6e9cdf95397b956 [shape=Mrecord, style=filled, label="{8ceff13 2015-12-12|Klaus Steinhauer:remove that damn .idea folder}"]
+nb0e0077845a2240f3aa9671905ca95cb579b8a0d [shape=Mrecord, style=filled, label="{b0e0077 2015-12-12|Klaus Steinhauer:first commit of ReadContactsActivity}"]
+n6632dae056fa773933cf4666688e23945f4407ae [shape=Mrecord, style=filled, label="{6632dae 2015-12-11|Marko Klepatz:Erstes grob Refactoring.}"]
+n9d584c2b4efa1ccff2411c8958cf15bfd90bb419 [shape=Mrecord, style=filled, label="{9d584c2 2015-12-10|Marko Klepatz:CreateNdefMessage und VCardFormatierung in relevanten klassen wieder in Syntaktisch gleicher abfolge \(Rest angepasst\).}"]
+n69912dde7363b07a83825e64cc4b9eb76de16386 [shape=Mrecord, style=filled, label="{69912dd 2015-12-10|Oliver Friedrich:Made it working \(dirty\)}"]
+n1416a9249fae5ac677fed8c9c446c369f2ce87a8 [shape=Mrecord, style=filled, label="{1416a92 2015-12-10|Oliver Friedrich:Adapted Beam vCard format}"]
+n876995cdc9fc5fe958636a36bd5800d60c7149e5 [shape=Mrecord, style=filled, label="{876995c 2015-12-10|Marko Klepatz:Anpassung BEAM}"]
+nffc64f67e3233f2bf302134881962602f737d465 [shape=Mrecord, style=filled, label="{ffc64f6 2015-12-10|Marko Klepatz:Weg mit dem drecks Post-Button!}"]
+n080db967b535e7d103abf0df1216bf28a5e87784 [shape=Mrecord, style=filled, label="{080db96 2015-12-10|Marko Klepatz:Weg mit dem drecks Post-Button!}"]
+n94577c08593bb9f901a985bf9ae45d5f4ee2c419 [shape=Mrecord, style=filled, label="{94577c0 2015-12-10|Marko Klepatz:Weg mit dem drecks Post-Button!}"]
+n0df3df9a4d37f23edae026665add05f6c803c815 [shape=Mrecord, style=filled, label="{0df3df9 2015-12-10|Marko Klepatz:BEAAMMMM!!!!}"]
+n025870ee7be3eea6f8ef4602c1ca2178ac68bcb6 [shape=Mrecord, style=filled, label="{025870e 2015-12-10|Oliver Friedrich:Fixed MIME message}"]
+n1011ed73c9b61262e164f871a00a10673f7fc676 [shape=Mrecord, style=filled, label="{1011ed7 2015-12-10|Oliver Friedrich:Added URL of example}"]
+nb4ce8eeb1f7b61c60d7d1194d3a4d98e5b1378bd [shape=Mrecord, style=filled, label="{b4ce8ee 2015-12-10|Oliver Friedrich:Extended beam example}"]
+nb4ad9044e2481f8f036cc55f7d58bec6a8f329d0 [shape=Mrecord, style=filled, label="{b4ad904 2015-12-10|Oliver Friedrich:Added Android Beam example}"]
+n337d42176380e911c5dc21bb986f9e340e4583de [shape=Mrecord, style=filled, label="{337d421 2015-12-10|Marko Klepatz:Techs hinzugefügt.}"]
+n2f93d2fff6c3dfecd064db47f94db1429434857c [shape=Mrecord, style=filled, label="{2f93d2f 2015-12-05|Oliver Friedrich:Added P2P emulation}"]
+ndf283e594ffef5bb591a0671372be8a668b25a19 [shape=Mrecord, style=filled, label="{df283e5 2015-12-05|Oliver Friedrich:Checked and fixed main app.}"]
+n27093b028ce5589ce08c13e4396076fa8d17126c [shape=Mrecord, style=filled, label="{27093b0 2015-12-03|Marko Klepatz:CardContent Array für Klaus}"]
+n50ed6b9e92b02d062a8af4337834fcffbe39ec45 [shape=Mrecord, style=filled, label="{50ed6b9 2015-12-02|Marko Klepatz:VCardFormatTool Klasse erstellt Refectoring: - Methoden: Format, Extract und Timestamp nach VCardFormatTool verschoben}"]
+n1759f57523ad1a43e998344823ab0e4bc93b4a4d [shape=Mrecord, style=filled, label="{1759f57 2015-12-02|Marko Klepatz:V-CardFormat implementiert \(V-CardVersion 3\) - V-Card Methode zum String Formatieren in V-Card-Format - V-Card Methode zum extrahieren in Ausgab-Format}"]
+n30bdb0ed98c18972f646373ebafc14cc8d940c96 [shape=Mrecord, style=filled, label="{30bdb0e 2015-11-29|Marko Klepatz:App kann nun mit Create V-CardActivity, karten beschreiben und mit MainActivtiy auslesen. \(Müssen uns vielleicht noch über das Format einigen,ist im Moment eine simple Lösung\)}"]
+n449057c26204a3f1790121c0e3964b7b6ef6fd8f [shape=Mrecord, style=filled, label="{449057c 2015-11-29|Marko Klepatz:Create V-Card Activity: - Hint-Texte-gesetzt}"]
+n3bce3e78f0aedb9930cf796b8ae71d4656dfa5be [shape=Mrecord, style=filled, label="{3bce3e7 2015-11-28|Marko Klepatz:Create V-Card Activity weiterentwickelt. Interface veränderungen.}"]
+nd66fae992e0df0c5ac2eed086ec6b203d2f3dd1d [shape=Mrecord, style=filled, label="{d66fae9 2015-11-28|Marko Klepatz:Neue Aktivity und Interface veränderungen.}"]
+nfc7736b2599cdda937751cd68d449756482ff86a [shape=Mrecord, style=filled, label="{fc7736b 2015-11-19|Klaus Steinhauer:ignore .idea}"]
+neae96ee1e66b7a2b170a6a8d444fa9b4a7482de9 [shape=Mrecord, style=filled, label="{eae96ee 2015-11-19|Marko Klepatz:Activity --\> AppCompatActivity Für Material Design auf allen Geräten mit niedrieger API Stufe.}"]
+n093eee8a30a78a39c12b65034a34229d887dca9b [shape=Mrecord, style=filled, label="{093eee8 2015-11-19|Marko Klepatz:Push Test mit Android Studio auf Ubuntu. 2 Docs hinzugefügt.}"]
+na9e045fb8715e04407e21ce30ae7310f9d3c21a4 [shape=Mrecord, style=filled, label="{a9e045f 2015-11-12|Marko Klepatz:Methodenname gehändert}"]
+n212cfbdfce64665479198b2adbf8be00e178e2c1 [shape=Mrecord, style=filled, label="{212cfbd 2015-11-12|Marko Klepatz:Methodenname gehändert}"]
+n9fe8eef48ffda526a9bbfc8f5dab808c7e3512b9 [shape=Mrecord, style=filled, label="{9fe8eef 2015-11-12|Marko Klepatz:Ausgabe: writen ---\> written}"]
+nc614fef4c49a7dd163b66f90b283150fe078c5f3 [shape=Mrecord, style=filled, label="{c614fef 2015-11-12|Marko Klepatz:Ádded project}"]
+n132cd0f24b8eee8379920cfb13fa1544b255d980 [shape=Mrecord, style=filled, label="{132cd0f 2015-11-12|Marko Klepatz:Added nfcapp}"]
+n5ebd36514bc22d891c42d3a05c2dc19aa3beb1a4 [shape=Mrecord, style=filled, label="{5ebd365 2015-11-12|Marko Klepatz:Initialized repo}"]
+n9c2ce579cbebe97d2d027465021e46ff0e4db690 [shape=Mrecord, style=filled, label="{9c2ce57 2015-11-05|Oliver Friedrich:Added link to pad}"]
+n99d7c034b40d9ca60321abe0a7cdea394d85c3e7 [shape=Mrecord, style=filled, label="{99d7c03 2015-11-05|Oliver Friedrich:Initial commit}"]
+n4cfeadebf3911c3f3f82b9f0c723413d5395b9b9 -> n7ce109d79d379428be3ff45c585f21ab4576bd22
+n7ce109d79d379428be3ff45c585f21ab4576bd22 -> n40ef84d2b57d6fd33144cd50beb1e929d6d4f7e4
+n40ef84d2b57d6fd33144cd50beb1e929d6d4f7e4 -> n443d10dae8af8730ba04893f4ae55776668c507c
+n40ef84d2b57d6fd33144cd50beb1e929d6d4f7e4 -> n59902338dd5f6bb6dae5fac699700f57a13d3f60
+n443d10dae8af8730ba04893f4ae55776668c507c -> ne102a91b238814156de6eefef95dc7ff31654d81
+n59902338dd5f6bb6dae5fac699700f57a13d3f60 -> nc581f0efa9d8180007a48d4591e1d62c4027cc42
+nc581f0efa9d8180007a48d4591e1d62c4027cc42 -> n676b12721311d79419a55c8d02c020b45bfb8d89
+n676b12721311d79419a55c8d02c020b45bfb8d89 -> ne102a91b238814156de6eefef95dc7ff31654d81
+ne102a91b238814156de6eefef95dc7ff31654d81 -> n6bd35939ecae45157619f7776bd996991c6f5a6a
+n6bd35939ecae45157619f7776bd996991c6f5a6a -> n69051db9dd6dbd2ab951b9acacafb41462c01bf0
+n69051db9dd6dbd2ab951b9acacafb41462c01bf0 -> nc7303ad015c76e99df0abd79419c1156ef53b5cd
+nc7303ad015c76e99df0abd79419c1156ef53b5cd -> nb08d82f92301653a8b8fff7ee27c47253b90b297
+nb08d82f92301653a8b8fff7ee27c47253b90b297 -> n4df288480ce988243a7faa72574ce2419834af9b
+n4df288480ce988243a7faa72574ce2419834af9b -> n203df5269f8516f5d54229a503fac304ff44ee2d
+n203df5269f8516f5d54229a503fac304ff44ee2d -> n576f52e1a245e9773fc8523b0da3c77beb438816
+n576f52e1a245e9773fc8523b0da3c77beb438816 -> nbb05df43cb1ed5e386338ba19f9c3baf2e352d71
+nbb05df43cb1ed5e386338ba19f9c3baf2e352d71 -> ne0972ce5ed01a115de8a90b144a6712d5aad996c
+ne0972ce5ed01a115de8a90b144a6712d5aad996c -> ne4a7017872c80dce31fa863f2982363877c77cfd
+ne4a7017872c80dce31fa863f2982363877c77cfd -> n9f94349f56a511775636e90259fbec1c72b3cdd5
+n9f94349f56a511775636e90259fbec1c72b3cdd5 -> ncae43e9f703559f3d9d000a23ab966ceab0e1e26
+ncae43e9f703559f3d9d000a23ab966ceab0e1e26 -> n155f6c61bacfe62e967757f109cf1d36b74c7771
+n155f6c61bacfe62e967757f109cf1d36b74c7771 -> n93e99d02b5c5bcd5eec006e7de88956e68aa407b
+n93e99d02b5c5bcd5eec006e7de88956e68aa407b -> nba98e5a4813de7e81e0a2ff63274fade6dd324b5
+nba98e5a4813de7e81e0a2ff63274fade6dd324b5 -> nbd65c5574c6ef1d9c88834de8fe5143c55c032db
+nbd65c5574c6ef1d9c88834de8fe5143c55c032db -> ne87747d47065f9a02c7478b5357ac4f3ece08054
+ne87747d47065f9a02c7478b5357ac4f3ece08054 -> nd37f131f1fc9f876bf361925c66a4237298fdc9a
+nd37f131f1fc9f876bf361925c66a4237298fdc9a -> n2921a662acaff5e056220021355f09a34208b2be
+n2921a662acaff5e056220021355f09a34208b2be -> n5b7d97d2943714309cf4b88fcead160d8f7556ff
+n5b7d97d2943714309cf4b88fcead160d8f7556ff -> n0e2c0cb1ce32fb5f71a2a902e5485410f517c7d5
+n0e2c0cb1ce32fb5f71a2a902e5485410f517c7d5 -> n1d709616a1f60ac875977a1eb56b6509d256d4a4
+n1d709616a1f60ac875977a1eb56b6509d256d4a4 -> n807d1b65ffbaeadf0eb5aecd688afba8ee932068
+n807d1b65ffbaeadf0eb5aecd688afba8ee932068 -> n2aadbee7e277eedc0594a2f1fe26d8b21245f2ff
+n2aadbee7e277eedc0594a2f1fe26d8b21245f2ff -> n249b6b9d407e0e05418f1162974cd8ceeb6b5c73
+n249b6b9d407e0e05418f1162974cd8ceeb6b5c73 -> n1adbefa7c602ae104819f7bb62c55c8dbadb914d
+n1adbefa7c602ae104819f7bb62c55c8dbadb914d -> n861cfba2d367eb171078f6c8bd5d69aef58ca9fd
+n861cfba2d367eb171078f6c8bd5d69aef58ca9fd -> n42b7baa862ad0469c19c79d89d7cb6a2cccab60f
+n42b7baa862ad0469c19c79d89d7cb6a2cccab60f -> nec58ab5a6783a898ee30dfb7f19b85616cb5a301
+nec58ab5a6783a898ee30dfb7f19b85616cb5a301 -> nb90299790d02266c3fd9c693e40c3719ed73e017
+nb90299790d02266c3fd9c693e40c3719ed73e017 -> n66bef77331b968c3a441df8bcf2c50f580cc99c4
+n66bef77331b968c3a441df8bcf2c50f580cc99c4 -> n8de48692f6fc337023f69639d492b29cee31e463
+n8de48692f6fc337023f69639d492b29cee31e463 -> n0ce45f2d9239cbba9179cf0f968f7740f2abf50b
+n0ce45f2d9239cbba9179cf0f968f7740f2abf50b -> nee1e2b707f8910463da4691a7cbf76e4e77f5d4b
+n0ce45f2d9239cbba9179cf0f968f7740f2abf50b -> neffba9e10c4f2ac202f55c1f6c69573b48cf3b3f
+nee1e2b707f8910463da4691a7cbf76e4e77f5d4b -> n4ba048a9a1a359cb674350057c20277f276ea1d9
+neffba9e10c4f2ac202f55c1f6c69573b48cf3b3f -> n4ba048a9a1a359cb674350057c20277f276ea1d9
+n4ba048a9a1a359cb674350057c20277f276ea1d9 -> n15eab1f49d33783ab569d05dd375aa4453c91df3
+n15eab1f49d33783ab569d05dd375aa4453c91df3 -> nba3e47b62a8536164799aac68693e2856eb18b81
+nba3e47b62a8536164799aac68693e2856eb18b81 -> nbba806dd589b6110dd9c44de551b07a2c7c7a9c8
+nba3e47b62a8536164799aac68693e2856eb18b81 -> n98d799d770e5af20e7f9e043a773f94dec775c01
+nbba806dd589b6110dd9c44de551b07a2c7c7a9c8 -> na843c3175e159144a193850f85129c9c26f80101
+n98d799d770e5af20e7f9e043a773f94dec775c01 -> na843c3175e159144a193850f85129c9c26f80101
+na843c3175e159144a193850f85129c9c26f80101 -> n95eec6f9e3c70ac60d59e55dd2cba302597b620e
+n95eec6f9e3c70ac60d59e55dd2cba302597b620e -> n531f9532f959db2c3bd190d7b9c9235d1ac33c6e
+n95eec6f9e3c70ac60d59e55dd2cba302597b620e -> nd86edc2b7c23777a2c18add873deaba16fc5e9de
+n531f9532f959db2c3bd190d7b9c9235d1ac33c6e -> n203a078eef84d43f66138cab78abf2b713682ec1
+n203a078eef84d43f66138cab78abf2b713682ec1 -> n8ceff13e159b00cfcbebe04dd6e9cdf95397b956
+nd86edc2b7c23777a2c18add873deaba16fc5e9de -> n8ceff13e159b00cfcbebe04dd6e9cdf95397b956
+n8ceff13e159b00cfcbebe04dd6e9cdf95397b956 -> nb0e0077845a2240f3aa9671905ca95cb579b8a0d
+nb0e0077845a2240f3aa9671905ca95cb579b8a0d -> n6632dae056fa773933cf4666688e23945f4407ae
+n6632dae056fa773933cf4666688e23945f4407ae -> n9d584c2b4efa1ccff2411c8958cf15bfd90bb419
+n9d584c2b4efa1ccff2411c8958cf15bfd90bb419 -> n69912dde7363b07a83825e64cc4b9eb76de16386
+n69912dde7363b07a83825e64cc4b9eb76de16386 -> n1416a9249fae5ac677fed8c9c446c369f2ce87a8
+n1416a9249fae5ac677fed8c9c446c369f2ce87a8 -> n876995cdc9fc5fe958636a36bd5800d60c7149e5
+n876995cdc9fc5fe958636a36bd5800d60c7149e5 -> nffc64f67e3233f2bf302134881962602f737d465
+nffc64f67e3233f2bf302134881962602f737d465 -> n080db967b535e7d103abf0df1216bf28a5e87784
+n080db967b535e7d103abf0df1216bf28a5e87784 -> n94577c08593bb9f901a985bf9ae45d5f4ee2c419
+n94577c08593bb9f901a985bf9ae45d5f4ee2c419 -> n0df3df9a4d37f23edae026665add05f6c803c815
+n0df3df9a4d37f23edae026665add05f6c803c815 -> n025870ee7be3eea6f8ef4602c1ca2178ac68bcb6
+n025870ee7be3eea6f8ef4602c1ca2178ac68bcb6 -> n1011ed73c9b61262e164f871a00a10673f7fc676
+n1011ed73c9b61262e164f871a00a10673f7fc676 -> nb4ce8eeb1f7b61c60d7d1194d3a4d98e5b1378bd
+nb4ce8eeb1f7b61c60d7d1194d3a4d98e5b1378bd -> nb4ad9044e2481f8f036cc55f7d58bec6a8f329d0
+nb4ad9044e2481f8f036cc55f7d58bec6a8f329d0 -> n337d42176380e911c5dc21bb986f9e340e4583de
+n337d42176380e911c5dc21bb986f9e340e4583de -> n2f93d2fff6c3dfecd064db47f94db1429434857c
+n2f93d2fff6c3dfecd064db47f94db1429434857c -> ndf283e594ffef5bb591a0671372be8a668b25a19
+ndf283e594ffef5bb591a0671372be8a668b25a19 -> n27093b028ce5589ce08c13e4396076fa8d17126c
+n27093b028ce5589ce08c13e4396076fa8d17126c -> n50ed6b9e92b02d062a8af4337834fcffbe39ec45
+n50ed6b9e92b02d062a8af4337834fcffbe39ec45 -> n1759f57523ad1a43e998344823ab0e4bc93b4a4d
+n1759f57523ad1a43e998344823ab0e4bc93b4a4d -> n30bdb0ed98c18972f646373ebafc14cc8d940c96
+n30bdb0ed98c18972f646373ebafc14cc8d940c96 -> n449057c26204a3f1790121c0e3964b7b6ef6fd8f
+n449057c26204a3f1790121c0e3964b7b6ef6fd8f -> n3bce3e78f0aedb9930cf796b8ae71d4656dfa5be
+n3bce3e78f0aedb9930cf796b8ae71d4656dfa5be -> nd66fae992e0df0c5ac2eed086ec6b203d2f3dd1d
+nd66fae992e0df0c5ac2eed086ec6b203d2f3dd1d -> nfc7736b2599cdda937751cd68d449756482ff86a
+nfc7736b2599cdda937751cd68d449756482ff86a -> neae96ee1e66b7a2b170a6a8d444fa9b4a7482de9
+neae96ee1e66b7a2b170a6a8d444fa9b4a7482de9 -> n093eee8a30a78a39c12b65034a34229d887dca9b
+n093eee8a30a78a39c12b65034a34229d887dca9b -> na9e045fb8715e04407e21ce30ae7310f9d3c21a4
+na9e045fb8715e04407e21ce30ae7310f9d3c21a4 -> n212cfbdfce64665479198b2adbf8be00e178e2c1
+n212cfbdfce64665479198b2adbf8be00e178e2c1 -> n9fe8eef48ffda526a9bbfc8f5dab808c7e3512b9
+n9fe8eef48ffda526a9bbfc8f5dab808c7e3512b9 -> nc614fef4c49a7dd163b66f90b283150fe078c5f3
+nc614fef4c49a7dd163b66f90b283150fe078c5f3 -> n132cd0f24b8eee8379920cfb13fa1544b255d980
+nc614fef4c49a7dd163b66f90b283150fe078c5f3 -> n9c2ce579cbebe97d2d027465021e46ff0e4db690
+n132cd0f24b8eee8379920cfb13fa1544b255d980 -> n5ebd36514bc22d891c42d3a05c2dc19aa3beb1a4
+n9c2ce579cbebe97d2d027465021e46ff0e4db690 -> n99d7c034b40d9ca60321abe0a7cdea394d85c3e7
+}
