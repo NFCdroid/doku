@@ -1,5 +1,4 @@
 @startuml
-title Aktivitätsdiagramm NFC Tagger\n
 
 start
 :Starte App;

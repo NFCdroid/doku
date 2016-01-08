@@ -1,5 +1,4 @@
 @startuml
-title Klassendiagramm NFC Tagger
 
 class activity.CreateVCardActivity
 class activity.MainActivity

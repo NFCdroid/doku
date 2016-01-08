@@ -1,5 +1,4 @@
 @startuml
-title Usecase Diagramm NFC Tagger \n
 left to right direction
 
 :Nutzer 1: as user1
