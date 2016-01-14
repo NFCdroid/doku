@@ -4,18 +4,24 @@ Hier wird die Dokumentation gepflegt.
 
 ## TODO
 - [ ] Einführung/Motivation -> @zottelbeyer
-- [ ] technische Einordnung
+- [ ] technische Einordnung (NFC, Apis + blbla)
 - [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen),[SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
 - [ ] Überblick über Ablauf der Implementierung (Extreme Programming, Einsatz von GitHub-Issues) -> @ohli
 - [ ] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
 - [x] Klassendoku erstellen -> @ohli
 - [x] UML-Diagramme erstellen -> @ohli
+- [ ] UML-Diagramme mit Fließtext versehen
+- [ ] Lizenz + Linux rocks @zottelbeyer
 - [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
 - [x] GitHub-Bericht rauskloppen (doku/gitstats) -> @ohli
 - [ ] Links zu Source und App
 - [ ] Fehler- und Problembetrachtung -> @ohli @MarkoKle
 - [x] Auflistung der Arbeitsanteile (siehe Klassendoku / Projektplan)
-- [ ] Präsentation vorbereiten
+- [ ] Präsentation vorbereiten, Themen: Funktionen, NFC, Ablauf (5 min) @ohli, @MarkoKle
+- [ ] Doxygen als Anhang
+- [ ] Whitespace in Klassenbeschreibung entfernen -> @ohli
+- [ ] Fazit / Ausblick @alle
+- [ ] Quellen?
 
 ----
 
