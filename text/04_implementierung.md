@@ -1,9 +1,6 @@
 # Implementierung
 ## Vorgehensweise
 
-Hier kommt was zum Programm von Marko hin.  
-Extreme Programming, wöchentliche Sprints.
-
 ### Extreme Programming
 Das Team arbeitete mit den agilen Methoden des „Extreme 
 Programming“ (XP). Die Entscheidung zur Anwendung dieser Methode ist 
