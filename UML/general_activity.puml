@@ -20,7 +20,11 @@ elseif ("V-CARD ERSTELLEN" gewählt) then (ja)
     else (nein)
     endif
     :Editiere Kontaktfelder;
-    :Schreibe Kontakt auf NFC-Karte;
+    if (Karte beschreiben) then (ja)
+		:Schreibe Kontakt auf NFC-Karte;
+	else (Übernehmen)
+		:Übernimm Kontakt in Main Activity;
+	endif
 elseif ("ANDROID BEAM" gewählt) then (ja)
     if (Überprüfe Beam-Status) then (aktiviert)
             :Sende Kontakt an Beam;
