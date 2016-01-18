@@ -7,7 +7,7 @@ Hier wird die Dokumentation gepflegt.
 - [ ] technische Einordnung (NFC, Apis + blbla) -> ohli
 - [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen),[SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
 - [x] Überblick über Ablauf der Implementierung (Extreme Programming, Einsatz von GitHub-Issues) -> @ohli
-- [ ] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
+- [x] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
 - [x] Klassendoku erstellen -> @ohli
 - [x] UML-Diagramme erstellen -> @ohli
 - [ ] UML-Diagramme mit Fließtext versehen
