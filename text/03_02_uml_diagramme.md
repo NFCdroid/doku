@@ -1,3 +1,10 @@
+# Software Engineering
+## Use Case
+Erläuterung des Usecases (eigentlich nur anforderungen im Detail)
+Erläuterung Activity Diagramm
+
+## noch was ?
+
 # UML-Diagramme
 Zur besseren Übersicht wurden zu Beginn des Projektes mehrere Diagramme nach UML-Standard 2.0 erstellt.
 
