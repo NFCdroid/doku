@@ -3,9 +3,9 @@
 Hier wird die Dokumentation gepflegt.
 
 ## TODO
-- [ ] Einführung/Motivation -> @zottelbeyer
+- [x] Einführung/Motivation -> @zottelbeyer
 - [ ] technische Einordnung (NFC, Apis + blbla) -> ohli
-- [ ] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen),[SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
+- [x] Anforderungen erstellen (Anwendungsfälle, nicht-funktionale Anforderungen),[SMART](https://de.wikipedia.org/wiki/SMART_(Projektmanagement) ->  @zottelbeyer
 - [x] Überblick über Ablauf der Implementierung (Extreme Programming, Einsatz von GitHub-Issues) -> @ohli
 - [x] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
 - [x] Klassendoku erstellen -> @ohli
@@ -22,6 +22,7 @@ Hier wird die Dokumentation gepflegt.
 - [ ] Whitespace in Klassenbeschreibung entfernen -> @ohli
 - [ ] Fazit / Ausblick @alle
 - [ ] Quellen?
+- [ ] Formatierung und TeXen.
 
 ----
 
@@ -48,7 +49,7 @@ Zum Erstellen der automatischen Dokumentation (als html und latex) sind folgende
 Die Formalitäten dann am Ende.
 
 ### text - Fließtext als Markdown-Dateien
-Hier liegen alle weiteren Dokutexte als einfache Textdatei in Markdown-Syntax vor (ja, Latex geht auch, ist hier aber übertrieben).  
+Hier liegen alle weiteren Dokutexte als einfache Textdatei in Markdown-Syntax vor (ja, Latex geht auch, ist hier aber übertrieben).
 Doxygen erkennt hierbei automatisch die Hierarchie, also einfach Überschriftenklasse mittels '#' bestimmen und ggf. die labelids in {} dahinter setzen, siehe auch:
 [doxygen-Markdown-Doku](http://www.stack.nl/~dimitri/doxygen/manual/markdown.html) und  [Markdown-Doku](http://daringfireball.net/projects/markdown/syntax)
 
