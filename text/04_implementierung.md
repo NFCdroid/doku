@@ -36,14 +36,106 @@ anderem Klassen und Methoden ausgelagert um die Architektur zu
 verbessern und intuitiver zu gestalten. Des Weiteren wurden Tests
 durchgeführt um letzte Logikfehler zu beseitigen und die
 Speichereffizienz so wie die Performance zu steigern. Dabei bedienten
-wir uns unter anderem der Tools „Inspect Code“ un dem
+wir uns unter anderem der Tools „Inspect Code“ und dem
 Ressourcenmonitor, welche in Android Studio integriert sind.
 
-## Dokumentation
+### technische Besonderheiten
+Im Verlauf der Entwicklung gab es einige technische Besonderheiten zu beachten. 
+Einen guten Überblick dazu bietet ein Blick in die **AndroidManifest.xml**
 
+	<?xml version="1.0" encoding="utf-8"?>
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="com.ag.mk.nfccardreadwrite">
+		
+Hier werden alle benötigten Berechtigungen der App aufgelistet. Einige Berechtigungen haben sich erst im Verlauf der Entwicklung ergeben,
+beispielsweise CALL_PHONE und VIBRATE.
+
+		<uses-permission android:name="android.permission.NFC" />
+		<uses-permission android:name="android.permission.READ_CONTACTS" />
+		<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+		<uses-permission android:name="android.permission.VIBRATE" />
+		<uses-permission android:name="android.permission.CALL_PHONE" />
+
+Hier erhält die App Zugriff auf den NFC-Chip.
+
+		<uses-feature
+			android:name="android.hardware.nfc"
+			android:required="false" />
+
+		<application
+			android:allowBackup="true"
+			android:icon="@mipmap/tagger_logo"
+			android:label="@string/app_name"
+			android:supportsRtl="true"
+			android:theme="@style/AppTheme" >
+			<activity android:name=".activity.MainActivity" >
+				<intent-filter>
+					<action android:name="android.intent.action.MAIN" />
+
+					<category android:name="android.intent.category.LAUNCHER" />
+				</intent-filter>
+				<intent-filter>
+					<action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+					<category android:name="android.intent.category.DEFAULT" />
+					
+Zum Schreiben von NDEF-Daten müssen die Daten auf dem Chip mit einem speziellen MIME-Typ gespeichert werden. So können Kontaktdaten mit dem Standard-vCard MIME-Typ geschrieben werden und das Android 
+System verwaltet automatisch die damit registrierten Anwendungen, so würde sich in diesem Fall jede mit vCard registrierte App öffnen lassen, z.B. die Android Kontakte-App.
+
+Wir haben uns bewusst gegen einen generischen MIME-Typ entschieden und stattdessen unseren eigenen gebaut, nämlich application/vnd.com.ag.mk.nfccardreadwrite.beam.
+Ein praktischer Nebeneffekt ist die auf einigen Geräten existierende Verknüpfung unbekannter MIME-Typen mit dem Google PlayStore. Hierbei ist es möglich, die App nur durch 
+Auflegen auf eine NFC-Karte aus dem PlayStore herunterzuladen, da nur diese den von uns defninierten MIME-Typ unterstützt.
+
+					<data android:mimeType="application/vnd.com.ag.mk.nfccardreadwrite.beam" />
+				</intent-filter>
+				<intent-filter>
+					<action android:name="android.nfc.action.TECH_DISCOVERED" />
+					<action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+					<category android:name="android.intent.category.DEFAULT" />
+				</intent-filter>
+
+				<meta-data
+					android:name="android.nfc.action.TECH_DISCOVERED"
+					android:resource="@xml/tech" />
+			</activity>
+			<activity android:name=".activity.CreateVCardActivity" >
+				<intent-filter>
+					<action android:name="android.intent.action.SEND" />
+
+					<category android:name="android.intent.category.DEFAULT" />
+				</intent-filter>
+
+Eine weitere Besonderheit ist das systemweite Eintragen der App als Empfänger für geteilte Kontakte.
+Dazu wird die App auf den zu empfangenden MIME-Typ, hier für das Standard vCard-Format, registriert und kann nun
+den vCard-senden-Intent des Systems empfangen.
+
+				<!-- Hier wird die App für den Kontakte-teilen Button registriert. -->
+				<intent-filter>
+					<action android:name="android.intent.action.SEND" />
+
+					<category android:name="android.intent.category.DEFAULT" />
+
+					<data android:mimeType="text/x-vcard" />
+				</intent-filter>
+			</activity>
+			<!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+				 App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+			<meta-data
+				android:name="com.google.android.gms.version"
+				android:value="@integer/google_play_services_version" />
+
+		</application>
+
+	</manifest>
+	
+Natürlich wäre es ohne weiteres möglich gewesen, unsere App auf den generischen vCard-MIME-Typ zu registrieren, intern handelt es sich um die gleiche Datenstruktur. Allerdings haben wir uns an dieser Stelle für den "exklusiveren" Weg entschieden.
+
+
+## Dokumentation
 Für die Dokumentation unserer Arbeit haben wir verschiedene Teilautomatische Open Source Lösungen verwendet. Zum Erstellen der Java Dokumentation haben wir Doxygen genutzt.
-Zum Erstellen der UML Diagramme plantuml welches die Möglichkeit bietet UML Diagramme mittels einfacher Textbeschreibung automatisiert zu erstellen.
-Beide Tools bieten unter Anderem LaTeX Dokumente als Ausgabeformat welche wir als Basis für unsere Dokumentation verwedenen.
+Zum Erstellen der UML Diagramme plantuml, welches die Möglichkeit bietet, UML Diagramme mittels einfacher Textbeschreibung automatisiert zu erstellen.
+Beide Tools bieten unter anderem LaTeX Dokumente als Ausgabeformat, welche wir als Basis für unsere Dokumentation verwendeten.
 
 ## Problembetrachtung
 
@@ -91,7 +183,6 @@ beschränkt.
 Angenommen, die AID steht zur Verfügung, dann kann eine Verbindung der
 emulierten Karte zum Lesegerät aufgebaut werden und der Datentransfer beginnt. Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine APDU (Application Protocol Data Unit) an die emulierte Karte schickt und von dieser eine valide APDU response erwartet. An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte APDU response auszulesen.
 In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
-
 
 ## Entwicklungsmodell
 Zur Umsetzung der Entwicklung wurde von Anfang an auf das verteilte Versionskontrollsystem git gesetzt.
