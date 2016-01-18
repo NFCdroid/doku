@@ -11,7 +11,7 @@ Hier wird die Dokumentation gepflegt.
 - [x] Klassendoku erstellen -> @ohli
 - [x] UML-Diagramme erstellen -> @ohli
 - [ ] UML-Diagramme mit Fließtext versehen
-- [ ] Lizenz + Linux rocks @zottelbeyer
+- [x] Lizenz + Linux rocks @zottelbeyer
 - [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
 - [x] GitHub-Bericht rauskloppen (doku/gitstats) -> @ohli
 - [ ] Links zu Source und App
