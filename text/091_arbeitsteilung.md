@@ -1,6 +1,6 @@
 # Arbeitsteilung
 ## Programmierung
-Oliver Friedrich: Beam Implementierung
+Oliver Friedrich: Beam Implementierung  
 Marko Klepatz: Main Activity, Helper Klassen, Refactoring, Bug-Fixing
 Klaus Steinhauer: Android Kontakt Handeling
 ## Dokumentation
