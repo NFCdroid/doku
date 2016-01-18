@@ -25,5 +25,6 @@ Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene NFC-
 * Lesen/Schreiben von NDEF-Daten eines NFC-Chips (seit Android 2.3)
 * Beamen von Daten zu anderen Androidgeräten mittels Android Beam (seit Android 4.0)
 * Emulation eines NFC-Chips ("Host-based Card Emulation", seit Android 4.4)
+
 Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten NFC-Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten  Problemen kam (siehe Problembetrachtung).  
 Zu Testzwecken wurden wiederbeschreibbare NFC-Karten mit dem Chip NTAG 216 und 888 Byte Speicher beschafft. Als Test- und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.1 und 6.0) sowie ein Samsung Galaxy S3 (Android 4.3).

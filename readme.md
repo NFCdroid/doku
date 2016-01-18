@@ -15,7 +15,7 @@ Hier wird die Dokumentation gepflegt.
 - [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
 - [x] GitHub-Bericht rauskloppen (doku/gitstats) -> @ohli
 - [ ] Links zu Source und App
-- [ ] Fehler- und Problembetrachtung -> @ohli @MarkoKle
+- [x] Fehler- und Problembetrachtung -> @ohli @MarkoKle
 - [x] Auflistung der Arbeitsanteile (siehe Klassendoku / Projektplan)
 - [ ] Präsentation vorbereiten, Themen: Funktionen, NFC, Ablauf (5 min) @ohli, @MarkoKle
 - [x] Doxygen als Anhang
