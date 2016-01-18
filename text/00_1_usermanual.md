@@ -11,7 +11,7 @@ Sie können Kontakte entweder aus dem Android Kontaktbuch importieren oder manue
 Wählen Sie einen beliebigen Kontakt zum Import. Nach erfolgtem Import können Sie die Daten mit "V-Card Erstellen" noch abändern und anschließend auf die Karte speichern.
 
 ### V-Card Erstellen
-Hier können Sie eigene Daten eingeben oder die vom Import eingefügten Daten bearbeiten. Legen Sie ihre NFC Karte auf die Rückseite des Gerätes und wählen Sie "Karte Beschreiben".
+Hier können Sie eigene Daten eingeben oder die vom Import eingefügten Daten bearbeiten. Legen Sie ihre NFC Karte auf die Rückseite des Gerätes und wählen Sie "Karte Beschreiben". Alternativ können Sie die Daten auch übernehmen und per Android Beam an ein anderes Gerät senden.
 
 ## Kontakte von einer Karte lesen
 Legen Sie die Karte einfach auf die Rückseite ihres Gerätes auf um die gespeicherten Daten angezeigt zu bekommen.
