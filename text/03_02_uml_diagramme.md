@@ -1,14 +1,4 @@
 # Software Engineering
-## Use Case
-Erläuterung des Usecases (eigentlich nur anforderungen im Detail)
-Erläuterung Activity Diagramm
-
-## noch was ?
-
-# UML-Diagramme
-Zur besseren Übersicht wurden zu Beginn des Projektes mehrere Diagramme nach UML-Standard 2.0 erstellt.  
-Auf diese wird im Folgenden eingegangen, die Reihenfolge zur Erstellung der Diagramme erfolgte hierbei chronologisch. 
-
 
 ## Usecase Diagramm
 Zu Beginn des Projektes ist es wichtig, Klarheit über die benötigten Funktionalitäten zu schaffen. State-of-the-art ist hier das Erstellen eines Usecase-Diagramms um die für den Nutzer möglichen Usecases (=Anwendungsfälle) zu erfassen und die Programmierung darauf auszurichten.  
