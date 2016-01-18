@@ -19,7 +19,7 @@ Hier wird die Dokumentation gepflegt.
 - [x] Auflistung der Arbeitsanteile (siehe Klassendoku / Projektplan)
 - [ ] Präsentation vorbereiten, Themen: Funktionen, NFC, Ablauf (5 min) @ohli, @MarkoKle
 - [x] Doxygen als Anhang
-- [ ] Whitespace in Klassenbeschreibung entfernen -> @ohli
+- [x] Whitespace in Klassenbeschreibung entfernen -> @ohli
 - [ ] Fazit / Ausblick @alle
 - [ ] Quellen?
 - [ ] Formatierung und TeXen.
