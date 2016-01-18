@@ -5,4 +5,4 @@ Im Laufe des Semesters konnten wir Projektplanungs- und Software-Engineering Ken
 Trotz unterschiedlicher Vorkenntnisse in der Android Programmierung konnten wir uns alle gut in die Programmierung einbringen und jeder einzelne einen Teil beitragen.
 
 ## Ausblick
-[Die App ist eigentlich fertig...]
+Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kontaktbildern wäre wünschenswert, sofern der Speicherplatz der Karte dies zulässt, und auch andere frei wählbare vCard Felder wären denkbar. Sinvoll wäre zudem weitere Kartentypen zu unterstützen und die Kartensimulation in die Praxis umzusetzen.

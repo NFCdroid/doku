@@ -12,12 +12,13 @@ class cardwork.CardWriter
 class dialogs.ContactListDialog
 class dialogs.SettingsDialog
 class tools.ContactTools
-class tools.DataWork
+class addons.DataWork
 class tools.NfcTools
 class tools.VCardFormatTools
 
 activity.CreateVCardActivity ..> addons.Vibration
 activity.CreateVCardActivity ..> addons.Voice
+activity.MainActivity ..> addons.DataWork
 activity.CreateVCardActivity ..> cardwork.CardWriter
 activity.CreateVCardActivity ..> tools.VCardFormatTools
 activity.MainActivity ..> addons.Vibration
@@ -28,7 +29,6 @@ activity.MainActivity ..> cardwork.CardWriter
 activity.MainActivity ..> dialogs.ContactListDialog
 activity.MainActivity ..> dialogs.SettingsDialog
 activity.MainActivity ..> tools.ContactTools
-activity.MainActivity ..> tools.DataWork
 activity.MainActivity ..> tools.NfcTools
 activity.MainActivity ..> tools.VCardFormatTools
 addressbookwork.AddressBookReader ..> activity.MainActivity
