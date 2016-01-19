@@ -1,4 +1,4 @@
-\documentclass[twoside]{book}
+\documentclass[a4paper,ngerman,12pt]{scrreprt}
 
 % Packages required by doxygen
 \usepackage{fixltx2e}
@@ -10,7 +10,6 @@
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
-\PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
 \usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
@@ -47,7 +46,6 @@
 \tolerance=750
 \hfuzz=15pt
 \hbadness=750
-\setlength{\emergencystretch}{15pt}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{3ex plus 2ex minus 2ex}
 \makeatletter
@@ -64,22 +62,9 @@
 \makeatother
 
 % Headers & footers
-\usepackage{fancyhdr}
-\pagestyle{fancyplain}
-\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
-\fancyhead[CE]{\fancyplain{}{}}
-\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
-\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
-\fancyhead[CO]{\fancyplain{}{}}
-\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
-\fancyfoot[LE]{\fancyplain{}{}}
-\fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[CO]{\fancyplain{}{}}
-\fancyfoot[RO]{\fancyplain{}{}}
-\renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\chaptermark}[1]{%
-	\markboth{#1}{}%
-}
+
+
+
 \renewcommand{\sectionmark}[1]{%
 	\markright{\thesection\ #1}%
 }
@@ -106,9 +91,6 @@
 }
 
 % Custom commands
-\newcommand{\clearemptydoublepage}{%
-	\newpage{\pagestyle{empty}\cleardoublepage}%
-}
 
 \usepackage{caption}
 \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
@@ -178,14 +160,17 @@
 		
 		%\maketitle
 	\end{center}
-	
-\pagenumbering{arabic}
-\tableofcontents
-\hypersetup{pageanchor=true}
+\end{titlepage}
 
+\pagenumbering{arabic}
+\begingroup
+\renewcommand*{\chapterpagestyle}{empty}
+\pagestyle{empty}
+\tableofcontents
+\clearpage
+\endgroup
 
 \chapter{Einleitung}
-\section{Einleitung}
  Im Rahmen unseres Studiums der Wirtschaftsinformatik haben wir uns im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. Nach einer kurzen Einführung in die Android Programmierung durch Herrn Professor Schemmert lag es an den Studierenden sich für eines der vorgeschlagenen Projekte oder den Entwurf eines eigenen Projektes zu entscheiden. Wir haben uns dazu entschieden, eine von uns vorgeschlagene N\+FC App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. Wir werden das gesamte Projekt gemäß unserer in vorherigen Semestern erlernten Methoden planen und mit den erlernten Mitteln des Moduls Software-\/\+Engineering an die Implementierung herangehen.
 
 Im Folgenden soll unsere Herangehensweise, aufgetretene Schwierigkeiten und weitere Informationen aufgezeigt werden.
@@ -485,10 +470,9 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 %--- End generated contents ---
 
 % Index
-\backmatter
 \newpage
 \phantomsection
-\clearemptydoublepage
+
 \addcontentsline{toc}{chapter}{Index}
 \printindex
 
