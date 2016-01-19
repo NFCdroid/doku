@@ -71,7 +71,9 @@
 }
 
 % Indices & bibliography
-\usepackage{natbib}
+\usepackage{url}
+\usepackage[bibstyle=numeric,backend=biber]{biblatex}
+\addbibresource{./doxygen/Android-NFC.bib}
 \usepackage[titles]{tocloft}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{5}
@@ -79,11 +81,7 @@
 
 % Hyperlinks (required, but should be loaded last)
 \usepackage{ifpdf}
-\ifpdf
-\usepackage[pdftex,pagebackref=true]{hyperref}
-\else
-\usepackage[ps2pdf,pagebackref=true]{hyperref}
-\fi
+\usepackage[bookmarks=false]{hyperref}
 \hypersetup{%
 	colorlinks=true,%
 	linkcolor=magenta,%
@@ -561,6 +559,11 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 	\acro{Continuous Integration}{kontinuierliches Erstellen (Kompilieren) der Anwendung zur Steigerung der Softwarequalität}
 \end{acronym}
 
+\newpage
+\section{Quellenverzeichnis}
+
+\nocite{*}
+\printbibliography
 
 \newpage
 \section{Programmcode Dokumentation}
