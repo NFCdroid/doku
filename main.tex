@@ -224,7 +224,7 @@ Um die Akzeptanz der App und damit auch deren Verbreitung zu unterstützen ergeb
 
 \chapter{Technische Einordnung}
 
-\ac{NFC}, ist eine auf R\+F\+ID (\char`\"{}radio-\/frequency identification\char`\"{}) basierende Technologie zur kontaktlosen Datenübertragung. \\
+\ac{NFC}, ist eine auf \ac{RFID} basierende Technologie zur kontaktlosen Datenübertragung. \\
 Hierbei können die Daten auch \char`\"{}passiv\char`\"{} verfügbar sein, d.\+h. der N\+F\+C-\/\+Chip beinhaltet keine eigene Stromversorgung und wird erst durch ein \char`\"{}aktives\char`\"{} Lesegerät ausgelesen. \\
 Die Übertragung erfolgt per Funk innerhalb eines Frequenzbereichs 13,56 M\+Hz, hierbei ist eine maximale Datenübertragungsrate von 424 k\+Bit/s möglich, bei einer Reichweite von maximal 10 cm. 
 Haupteinsatzbereiche sind kontaktloses Bezahlen und Zugangskontrolle, jeweils unter Einsatz eines verschlüsselten Datenbereiches, auf den der Zugriff mittels Challenge-\/\+Response-\/\+Verfahren erfolgt. \\
@@ -241,7 +241,7 @@ Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene N\+F
 \item Emulation eines N\+F\+C-\/\+Chips (\char`\"{}\+Host-\/based Card Emulation\char`\"{}, seit Android 4.\+4)
 \end{itemize}
 
-Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten N\+F\+C-\/\+Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der N\+F\+C-\/\+Chip-\/\+Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
+Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten N\+F\+C-\/\+Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
 Zu Testzwecken wurden wiederbeschreibbare N\+F\+C-\/\+Karten mit dem Chip N\+T\+AG 216 und 888 Byte Speicher beschafft. Als Test-\/ und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.\+1 und 6.\+0) sowie ein Samsung Galaxy S3 (Android 4.\+3). \\
 N\+F\+C\+Tagger ist eine App um Visitenkarten im V\+Card Format auf N\+FC Karten zu speichern, auszulesen und kontaktlos auszutauschen.
 
@@ -545,13 +545,14 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 \phantomsection
 
 \chapter{Anhang}
-\section{Abkürungsverzeichnis}
+\section{Abkürzungsverzeichnis}
 %Abkürzungen
 \begin{acronym}
 	\acro{HCE}{Host based card emulation: Emulation einer NFC-Karte durch das Gerät}
-	\acro{APDU}{Application Protocol Data Unit: Anwendungseinheit innerhalb der NFC-Kommunikation}
+	\acro{APDU}{Application Protocol Data Unit: Anwendungseinheit innerhalb der NFC-Kommunikation, standardisiert nach ISO 7816}
 	\acro{AID}{Application ID: eindeutige ID des NFC-Readers}
 	\acro{NFC}{Near Field Communication: auf RFID basierender Übertragungsstandard}
+	\acro{RFID}{radio-frequency identification: Technologie zur kontaktlosen Datenübertragung mittels elektromagnetischer Wellen}
 	\acro{NDEF}{NFC Data Exchange Format, Standard-Datenaustauschformat zwischen NFC-Chips}
 	\acro{Refactoring}{Begriff aus dem Software Engineering, Restrukturierung des Quellcodes zur besseren Lesbarkeit}
 	\acro{Continuous Integration}{kontinuierliches Erstellen (Kompilieren) der Anwendung zur Steigerung der Softwarequalität}
