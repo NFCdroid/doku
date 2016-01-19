@@ -11,7 +11,7 @@ Hier wird die Dokumentation gepflegt.
 - [x] Glossar
 - [ ] Anforderungen
 - [ ] Syntax-Highlighting
-- [ ] itemize mit weniger zeilenabstand
+- [x] itemize mit weniger zeilenabstand
 - [ ] ...
 
 ----

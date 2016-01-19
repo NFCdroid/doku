@@ -23,6 +23,7 @@
 \usepackage{amssymb}
 \usepackage{sectsty}
 \usepackage[printonlyused,withpage,footnote]{acronym}
+\usepackage[shortlabels]{enumitem}
 
 \renewcommand{\familydefault}{\sfdefault}
 \allsectionsfont{%
@@ -236,11 +237,14 @@ Dieser beinhaltet bereits eigene Verschlüsselungscodes, stellt seine Funktional
 
 Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene N\+F\+C-\/\+Modi bereitgestellt:
 
-\begin{itemize}
+\setlist[enumerate]{noitemsep}
+
+\begin{enumerate}[-]
+\setlist{itemsep=0pt}
 \item Lesen/\+Schreiben von N\+D\+E\+F-\/\+Daten eines N\+F\+C-\/\+Chips (seit Android 2.\+3)
 \item Beamen von Daten zu anderen Androidgeräten mittels Android Beam (seit Android 4.\+0)
 \item Emulation eines N\+F\+C-\/\+Chips (\char`\"{}\+Host-\/based Card Emulation\char`\"{}, seit Android 4.\+4)
-\end{itemize}
+\end{enumerate}
 
 Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten N\+F\+C-\/\+Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
 Zu Testzwecken wurden wiederbeschreibbare N\+F\+C-\/\+Karten mit dem Chip N\+T\+AG 216 und 888 Byte Speicher beschafft. Als Test-\/ und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.\+1 und 6.\+0) sowie ein Samsung Galaxy S3 (Android 4.\+3). \\
@@ -560,8 +564,8 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 \end{acronym}
 
 \newpage
-\section{Quellenverzeichnis}
 
+\section{Quellenverzeichnis}
 \nocite{*}
 \printbibliography
 
