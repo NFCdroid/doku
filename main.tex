@@ -22,6 +22,7 @@
 \usepackage{courier}
 \usepackage{amssymb}
 \usepackage{sectsty}
+\usepackage[printonlyused,withpage,footnote]{acronym}
 
 \renewcommand{\familydefault}{\sfdefault}
 \allsectionsfont{%
@@ -173,7 +174,7 @@
 \chapter{Einleitung}
  Im Rahmen unseres Studiums der Wirtschaftsinformatik haben wir uns im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. \\
  Nach einer kurzen Einführung in die Android Programmierung durch Herrn Professor Schemmert lag es an den Studierenden sich für eines der vorgeschlagenen Projekte oder den Entwurf eines eigenen Projektes zu entscheiden. \\
- Wir haben uns dazu entschieden, eine von uns vorgeschlagene N\+FC App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. \newline
+ Wir haben uns dazu entschieden, eine von uns vorgeschlagene \ac{NFC} App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. \newline
  Wir werden das gesamte Projekt gemäß unserer in vorherigen Semestern erlernten Methoden planen und mit den erlernten Mitteln des Moduls Software-\/\+Engineering an die Implementierung herangehen.
 
 Im Folgenden soll unsere Herangehensweise, aufgetretene Schwierigkeiten und weitere Informationen aufgezeigt werden.
@@ -198,11 +199,11 @@ Um die Akzeptanz der App und damit auch deren Verbreitung zu unterstützen ergeb
 
 \chapter{Technische Einordnung}
 
-N\+FC, kurz für \char`\"{}\+Near Field Communication\char`\"{}, ist eine auf R\+F\+ID (\char`\"{}radio-\/frequency identification\char`\"{}) basierende Technologie zur kontaktlosen Datenübertragung. \\
+\ac{NFC}, ist eine auf R\+F\+ID (\char`\"{}radio-\/frequency identification\char`\"{}) basierende Technologie zur kontaktlosen Datenübertragung. \\
 Hierbei können die Daten auch \char`\"{}passiv\char`\"{} verfügbar sein, d.\+h. der N\+F\+C-\/\+Chip beinhaltet keine eigene Stromversorgung und wird erst durch ein \char`\"{}aktives\char`\"{} Lesegerät ausgelesen. \\
 Die Übertragung erfolgt per Funk innerhalb eines Frequenzbereichs 13,56 M\+Hz, hierbei ist eine maximale Datenübertragungsrate von 424 k\+Bit/s möglich, bei einer Reichweite von maximal 10 cm. 
 Haupteinsatzbereiche sind kontaktloses Bezahlen und Zugangskontrolle, jeweils unter Einsatz eines verschlüsselten Datenbereiches, auf den der Zugriff mittels Challenge-\/\+Response-\/\+Verfahren erfolgt. \\
-Als Datenaustauschformat kommt meist N\+D\+EF (N\+FC data exchange format) zum Einsatz. Weitere Informationen zur Spezifikation von N\+F\+C-\/\+Karten können der I\+SO 7816 entnommen werden.\newline
+Als Datenaustauschformat kommt meist \ac{NDEF} zum Einsatz. Weitere Informationen zur Spezifikation von N\+F\+C-\/\+Karten können der I\+SO 7816 entnommen werden.\newline
 
 Seit 2008 gibt es erste N\+F\+C-\/fähige Mobiltelefone. Ein großer Teil der aktuellen Android-Smartphones verfügt über einen integrierten N\+F\+C-\/\+Chip. \\
 Dieser beinhaltet bereits eigene Verschlüsselungscodes, stellt seine Funktionalität aber auch per Android A\+PI zur Verfügung. Zusätzlich zu der zuvor beschriebenen aktiv-\/passiv-\/\+Kopplung wurde mit \char`\"{}\+Android Beam\char`\"{} auch eine aktiv-\/aktiv-\/\+Kopplung zwischen zwei Android-\/\+Geräten eingeführt.
@@ -345,14 +346,14 @@ Das Team arbeitete mit den agilen Methoden des „\+Extreme Programming“ (XP).
 Da es sich um ein prototypisches Programmierprojekt handelt, war der Aufwand zur Implementierung einiger Funktionalitäten schwer abzuschätzen. Weiterhin war unser \char`\"{}\+Kunde\char`\"{}, Professor Schemmert, sehr gut verfügbar und auch in seinen Anforderungen flexibel.\\ Voraussetzung für die erfolgreiche Durchführung des XP waren der Einsatz einer verteilten Versionsverwaltung (siehe nächster Abschnitt), kontinuierliches Testen auf unterschiedlichen Geräten sowie eine teilautomatisch generierte Dokumentation.
 
 Natürlich konnte nicht jede Technik genau nach diesem Modell angewandt werden, so waren beispielsweise „\+Stand Up Meetings“ nicht täglich sondern nur wöchentlich möglich.\\ 
-Das Durchführen von „\+Unit Tests“ war ebenfalls zeitlich nicht realisierbar, zukünftig könnten diese aber durch den Einsatz von \char`\"{}\+Continuous Integration\char`\"{} abgedeckt werden. \\
+Das Durchführen von „\+Unit Tests“ war ebenfalls zeitlich nicht realisierbar, zukünftig könnten diese aber durch den Einsatz von \char`\"{}\+\ac{Continuous Integration}\char`\"{} abgedeckt werden. \\
 Jedoch hat die X\+P-\/\+Technik des Pair-\/\+Programming immer wieder geholfen, Fehler, Lösungen und Code-\/\+Optimierungen schnell zu finden und zu realisieren. \\
 Auch der gegenseitige bedingte Wissenszuwachs, der in einem Hochschulprojekt mit im Vordergrund stehen sollte, war dadurch sehr groß.
 
 \subsection{programmiertechnisches Vorgehen}
 
 Das Team ist programmiertechnisch folgendermaßen vorgegangen\+: Es wurde zunächst überlegt welche Klassen und Methoden implementiert werden müssen, nachdem diese realisiert wurden und im späteren Verlauf Abhängigkeiten entstanden, wurden diese agil hinzugefügt. \\
-Sollte eine Klasse oder Methode zu groß geworden sein, wurden diese durch Refactoring in dafür sinnvolle kleinere Klassen und Methoden ausgelagert. Wenn neue Elemente implementiert wurden, wurde danach oder dabei immer direkt getestet, somit konnten wir große Fehlprogrammierungen effektiv vermeiden.
+Sollte eine Klasse oder Methode zu groß geworden sein, wurden diese durch \ac{Refactoring} in dafür sinnvolle kleinere Klassen und Methoden ausgelagert. Wenn neue Elemente implementiert wurden, wurde danach oder dabei immer direkt getestet, somit konnten wir große Fehlprogrammierungen effektiv vermeiden.
 
 Am Ende des Projekts wurde noch ein großes Refactoring durchgeführt um dem Code eine gute Leserlichkeit zu verleihen. Dabei wurden unter anderem Klassen und Methoden ausgelagert um die Architektur zu verbessern und intuitiver zu gestalten. \\
 Des Weiteren wurden Tests durchgeführt um letzte Logikfehler zu beseitigen und die Speichereffizienz so wie die Performance zu steigern. Dabei bedienten wir uns unter anderem der Tools „\+Inspect Code“ und dem Ressourcenmonitor, welche in Android Studio integriert sind.
@@ -463,14 +464,14 @@ Es kann nur die Route zum und vom Secure Element angesprochen werden, d.\+h. die
 \subsection*{Kartenemulation}
 
 Zur Emulation von Karten kann auch das Secure Element des Gerätes verwendet werden, hierbei ist jedoch zwischen den unterschiedlichen N\+F\+C-\/\+Chips zu unterscheiden, da diese nicht jeden Kartentyp emulieren können.\\
-\+Zur Unterscheidung der N\+F\+C-\/\+Lesegeräte werden diese intern mit einer Typ-\/\+ID versehen und im Android-\/\+System entsprechend geroutet. Dieses Routing verhindert auch den weiteren Einsatz der Kartenemulation.\\ Das Hauptproblem hierbei ist das statische Routing der A\+ID (application ID, z.\+B. des Lesegerätes) auf spezielle Apps. 
+\+Zur Unterscheidung der N\+F\+C-\/\+Lesegeräte werden diese intern mit einer Typ-\/\+ID versehen und im Android-\/\+System entsprechend geroutet. Dieses Routing verhindert auch den weiteren Einsatz der Kartenemulation.\\ Das Hauptproblem hierbei ist das statische Routing der \ac{AID} auf spezielle Apps. 
 Wenn es zu der A\+ID des Lesegerätes keine im System registrierte App gibt, dann kommt der initiale Handshake zwischen emulierter Karte und Lesegerät nicht zustande. 
 Der Großteil der Hersteller verwendet eigene A\+I\+Ds und stellt diese meist nicht zur Verfügung, weiterhin werden diese A\+I\+Ds vom Android-\/\+System zwar registriert, aber sind nicht ohne erheblichen Aufwand (Änderung der Berechtigungsdatei mit root-\/\+Rechten...) auszulesen. \\
-Folglich wäre es notwendig gewesen, die App auf mehrere A\+I\+Ds zu registrieren. Für die anfängliche Idee, die Hf\+T\+L-\/\+Zugangskarte zu emulieren, hätte selbst die Kenntnis der A\+ID nicht ausgereicht, da diese ein Secure Element beinhaltet und dieses von der H\+CE nicht abgedeckt werden kann. \newpage
-Ein weiteres Problem hinsichtlich der H\+CE ist auch eine mangelnde Testumgebung, für realistische Tests wäre die Anschaffung eines N\+F\+C-\/\+Lesegerätes unumgänglich gewesen, da der in Android integrierte N\+F\+C-\/\+Lesemodus zu generisch ist und sich nicht auf spezielle A\+I\+Ds beschränkt. \\
+Folglich wäre es notwendig gewesen, die App auf mehrere A\+I\+Ds zu registrieren. Für die anfängliche Idee, die Hf\+T\+L-\/\+Zugangskarte zu emulieren, hätte selbst die Kenntnis der A\+ID nicht ausgereicht, da diese ein Secure Element beinhaltet und dieses von der \ac{HCE} nicht abgedeckt werden kann. \newpage
+Ein weiteres Problem hinsichtlich der \ac{HCE} ist auch eine mangelnde Testumgebung, für realistische Tests wäre die Anschaffung eines N\+F\+C-\/\+Lesegerätes unumgänglich gewesen, da der in Android integrierte N\+F\+C-\/\+Lesemodus zu generisch ist und sich nicht auf spezielle A\+I\+Ds beschränkt. \\
 Angenommen, die A\+ID steht zur Verfügung, dann kann eine Verbindung der emulierten Karte zum Lesegerät aufgebaut werden und der Datentransfer beginnt. 
-Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine A\+P\+DU (Application Protocol Data Unit) an die emulierte Karte schickt und von dieser eine valide A\+P\+DU Response erwartet. \\
-An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte A\+P\+DU Response auszulesen. In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
+Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine \ac{APDU} an die emulierte Karte schickt und von dieser eine valide APDU Response erwartet. \\
+An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte APDU Response auszulesen. In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
 
 \section{Entwicklungsmodell}
 
@@ -517,6 +518,20 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 % Index
 \newpage
 \phantomsection
+
+\chapter{Anhang}
+\section{Abkürungsverzeichnis}
+%Abkürzungen
+\begin{acronym}
+	\acro{HCE}{Host based card emulation: Emulation einer NFC-Karte durch das Gerät}
+	\acro{APDU}{Application Protocol Data Unit: Anwendungseinheit innerhalb der NFC-Kommunikation}
+	\acro{AID}{Application ID: eindeutige ID des NFC-Readers}
+	\acro{NFC}{Near Field Communication: auf RFID basierender Übertragungsstandard}
+	\acro{NDEF}{NFC Data Exchange Format, Standard-Datenaustauschformat zwischen NFC-Chips}
+	\acro{Refactoring}{Begriff aus dem Software Engineering, Restrukturierung des Quellcodes zur besseren Lesbarkeit}
+	\acro{Continuous Integration}{kontinuierliches Erstellen (Kompilieren) der Anwendung zur Steigerung der Softwarequalität}
+\end{acronym}
+
 
 \addcontentsline{toc}{chapter}{Index}
 \printindex
