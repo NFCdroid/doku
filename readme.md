@@ -10,7 +10,6 @@ Hier wird die Dokumentation gepflegt.
 - [ ] Tabellen umbrechen
 - [x] Glossar
 - [ ] Anforderungen
-- [ ] Syntax-Highlighting
 - [x] itemize mit weniger zeilenabstand
 - [ ] ...
 
