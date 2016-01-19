@@ -10,7 +10,7 @@ Hier wird die Dokumentation gepflegt.
 - [x] Anwenderdoku (=Nutzerhandbuch) erstellen -> @zottelbeyer
 - [x] Klassendoku erstellen -> @ohli
 - [x] UML-Diagramme erstellen -> @ohli
-- [ ] UML-Diagramme mit Fließtext versehen -> @ohli
+- [x] UML-Diagramme mit Fließtext versehen -> @ohli
 - [x] Lizenz + Linux rocks @zottelbeyer
 - [x] Projektbericht erstellen (Gantt etc., siehe project-mgmt) -> @ohli
 - [x] GitHub-Bericht rauskloppen (doku/gitstats) -> @ohli
@@ -20,9 +20,13 @@ Hier wird die Dokumentation gepflegt.
 - [ ] Präsentation vorbereiten, Themen: Funktionen, NFC, Ablauf (5 min) @ohli, @MarkoKle
 - [x] Doxygen als Anhang
 - [x] Whitespace in Klassenbeschreibung entfernen -> @ohli
-- [ ] Fazit / Ausblick @alle
-- [ ] Quellen?
+- [x] Fazit / Ausblick @alle
+- [ ] Quellen
 - [ ] Formatierung und TeXen.
+- [ ] Tabellen umbrechen
+- [ ] Glossar
+- [ ] Anforderungen
+- [ ] Syntax-Highlighting
 
 ----
 
