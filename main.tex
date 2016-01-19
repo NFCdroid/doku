@@ -348,9 +348,8 @@ Nachdem die App auf die Bedienpfade abgestimmt wurde, ist es gute Praxis, die Fu
 \end{figure}
 
 \chapter{Implementierung}
- \section*{Vorgehensweise}
-
-\subsection*{Extreme Programming}
+\section{Vorgehensweise}
+\subsection{Extreme Programming}
 
 Das Team arbeitete mit den agilen Methoden des „\+Extreme Programming“ (XP). Die Entscheidung zur Anwendung dieser Methode ist hauptsächlich durch den Projekttypen und die zu Projektbeginn zur Verfügung stehenden Informationen bedingt. Da es sich um ein prototypisches Programmierprojekt handelt, war der Aufwand zur Implementierung einiger Funktionalitäten schwer abzuschätzen. Weiterhin war unser \char`\"{}\+Kunde\char`\"{}, Professor Schemmert, sehr gut verfügbar und auch in seinen Anforderungen flexibel. Voraussetzung für die erfolgreiche Durchführung des XP waren der Einsatz einer verteilten Versionsverwaltung (siehe nächster Abschnitt), kontinuierliches Testen auf unterschiedlichen Geräten sowie eine teilautomatisch generierte Dokumentation.
 
@@ -362,7 +361,7 @@ Das Team ist programmiertechnisch folgendermaßen vorgegangen\+: Es wurde zunäc
 
 Am Ende des Projekts wurde noch ein großes Refactoring durchgeführt um dem Code eine gute Leserlichkeit zu verleihen. Dabei wurden unter anderem Klassen und Methoden ausgelagert um die Architektur zu verbessern und intuitiver zu gestalten. Des Weiteren wurden Tests durchgeführt um letzte Logikfehler zu beseitigen und die Speichereffizienz so wie die Performance zu steigern. Dabei bedienten wir uns unter anderem der Tools „\+Inspect Code“ und dem Ressourcenmonitor, welche in Android Studio integriert sind.
 
-\subsection{technische Besonderheiten}
+\section{technische Besonderheiten}
 
 Im Verlauf der Entwicklung gab es einige technische Besonderheiten zu beachten. Einen guten Überblick dazu bietet ein Blick in die {\bfseries Android\+Manifest.\+xml} \begin{DoxyVerb}<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -448,52 +447,53 @@ Eine weitere Besonderheit ist das systemweite Eintragen der App als Empfänger f
 
 Natürlich wäre es ohne weiteres möglich gewesen, unsere App auf den generischen v\+Card-\/\+M\+I\+M\+E-\/\+Typ zu registrieren, intern handelt es sich um die gleiche Datenstruktur. Allerdings haben wir uns an dieser Stelle für den \char`\"{}exklusiveren\char`\"{} Weg entschieden.
 
-\subsection*{Dokumentation}
+\section{Dokumentation}
 
 Für die Dokumentation unserer Arbeit haben wir verschiedene Teilautomatische Open Source Lösungen verwendet. Zum Erstellen der Java Dokumentation haben wir Doxygen genutzt. Zum Erstellen der U\+ML Diagramme plantuml, welches die Möglichkeit bietet, U\+ML Diagramme mittels einfacher Textbeschreibung automatisiert zu erstellen. Beide Tools bieten unter anderem La\+TeX Dokumente als Ausgabeformat, welche wir als Basis für unsere Dokumentation verwendeten.
 
-\subsection*{Problembetrachtung}
+\section{Problembetrachtung}
 
-\paragraph*{doppelter Intent}
+\subsection*{doppelter Intent}
 
 Der Fehler der das größte Fehlverhalten verursachte und leider auch nicht durch das Analysieren von Exceptions zu beseitigen war, weil er zum Teil der logischen Natur entsprang, war jener einer ungenutzten implementierten Technologie im Intent-\/\+Filter „\+Iso\+Dep.\+class.\+get\+Name()“. Er wies folgendes Verhalten auf\+: Wann immer ein N\+FC Medium an das Gerät gehalten, bzw. ein Beam vorgang gestartet wurde, startete die App automatisch immer neu. Erst durch das Entfernen aus dem Intent-\/\+Filter, konnte dieser Fehler behoben werden.
 
-\paragraph*{Zugriff auf das secure element}
+\subsection*{Zugriff auf das secure element}
 
 Zur Kommunikation mit Bezahlterminals und Zugangssystemen verfügen Android Smartphones über ein secure element innerhalb des N\+F\+C-\/\+Chips. In diesem secure element sind I\+Ds und Schlüssel einiger sicherheitskritischer Anwendungen gespeichert, weshalb der direkte Zugriff darauf (via A\+PI o.\+ä.) nicht möglich ist. Es kann nur die Route zum und vom secure element angesprochen werden, d.\+h. die Daten werden z.\+B. von der App bereitgestellt und das secure element stellt die Sicherheitsfunktion bereit.
 
-\paragraph*{Kartenemulation}
+\subsection*{Kartenemulation}
 
 Zur Emulation von Karten kann auch das secure element verwendet werden, hierbei ist jedoch zwischen den unterschiedlichen N\+F\+C-\/\+Chips zu unterscheiden, da diese nicht jeden Kartentyp emulieren können.\+Zur Unterscheidung der N\+F\+C-\/\+Lesegeräte werden diese intern mit einer Typ-\/\+ID versehen und im Android-\/\+System entsprechend geroutet. Dieses Routing verhindert auch den weiteren Einsatz der Kartenemulation. Das Hauptproblem hierbei ist das statische Routing der A\+ID (application ID, z.\+B. des Lesegerätes) auf spezielle Apps. Wenn es zu der A\+ID des Lesegerätes keine im System registrierte App gibt, dann kommt der initiale Handshake zwischen emulierter Karte und Lesegerät nicht zustande . Der Großteil der Hersteller verwendet eigene A\+I\+Ds und stellt diese meist nicht zur Verfügung, weiterhin werden diese A\+I\+Ds vom Android-\/\+System zwar registriert, aber sind nicht ohne erheblichen Aufwand (Änderung der Berechtigungsdatei mit root-\/\+Rechten...) auszulesen. Folglich wäre es notwendig gewesen, die App auf mehrere A\+I\+Ds zu registrieren. Für die anfängliche Idee, die Hf\+T\+L-\/\+Zugangskarte zu emulieren, hätte selbst die Kenntnis der A\+ID nicht ausgereicht, da diese ein secure element beinhaltet und dieses von der H\+CE nicht abgedeckt werden kann. Ein weiteres Problem hinsichtlich der H\+CE ist auch eine mangelnde Testumgebung, für realistische Tests wäre die Anschaffung eines N\+F\+C-\/\+Lesegerätes unumgänglich gewesen, da der in Android integrierte N\+F\+C-\/\+Lesemodus zu generisch ist und sich nicht auf spezielle A\+I\+Ds beschränkt. Angenommen, die A\+ID steht zur Verfügung, dann kann eine Verbindung der emulierten Karte zum Lesegerät aufgebaut werden und der Datentransfer beginnt. Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine A\+P\+DU (Application Protocol Data Unit) an die emulierte Karte schickt und von dieser eine valide A\+P\+DU response erwartet. An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte A\+P\+DU response auszulesen. In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
 
-\subsection{Entwicklungsmodell}
+\section{Entwicklungsmodell}
 
 Zur Umsetzung der Entwicklung wurde von Anfang an auf das verteilte Versionskontrollsystem git gesetzt. Ungetestete Funktionen wurden in Branches entwickelt und erst bei voller Funktion in den dadurch stabil gehaltenen Master integriert (\char`\"{}merged\char`\"{}). Falls dieser Master doch einen fehlerhaften Zustand aufwies, so ließ sich dieser problemlos aufgrund der Commit-\/\+Beschreibungen auf einen funktionierenden Stand zurücksetzen. Um dies zu vermeiden erfolgte das Hochladen (\char`\"{}\+Commit \& Push\char`\"{}) in den Master erst nach vorherigem Testen der App.
 
-Als technische Umsetzung wurde der git-\/\+Hosting-\/\+Dienst Git\+Hub genutzt. Dort wurde eine Organisation erstellt die wiederum mehrere git-\/\+Verzeichnisse (\char`\"{}\+Repositories\char`\"{}) beinhaltet. So wurden von Anfang an die App und die Dokumentation in unterschiedlichen Verzeichnissen versioniert. Weiterhin wurde die bei Git\+Hub integrierte Ticketverwaltung zur Projektsteuerung und Behebung von Fehlern eingesetzt. Jedes Fehlerticket (Tag\+: \char`\"{}bug\char`\"{}) enthält eine Beschreibung des Fehlers und kann einem Bearbeiter zugewiesen werden. Zusätzlich wurden noch Verbesserungsvorschläge als Ticket erfasst (Tag\+: \char`\"{}enhancement\char`\"{}) und die Tickets verschiedenen Meilensteinen zugeordnet um eine bessere Terminierung zu erreichen. \subsection*{Open Source}
+Als technische Umsetzung wurde der git-\/\+Hosting-\/\+Dienst Git\+Hub genutzt. Dort wurde eine Organisation erstellt die wiederum mehrere git-\/\+Verzeichnisse (\char`\"{}\+Repositories\char`\"{}) beinhaltet. So wurden von Anfang an die App und die Dokumentation in unterschiedlichen Verzeichnissen versioniert. Weiterhin wurde die bei Git\+Hub integrierte Ticketverwaltung zur Projektsteuerung und Behebung von Fehlern eingesetzt. Jedes Fehlerticket (Tag\+: \char`\"{}bug\char`\"{}) enthält eine Beschreibung des Fehlers und kann einem Bearbeiter zugewiesen werden. Zusätzlich wurden noch Verbesserungsvorschläge als Ticket erfasst (Tag\+: \char`\"{}enhancement\char`\"{}) und die Tickets verschiedenen Meilensteinen zugeordnet um eine bessere Terminierung zu erreichen. 
 
 \chapter{Open Source und Lizenz}
+\subsection*{Open Source}]
 Die Ersteller der App arbeiten alle mit Linux und unterstützen dessen Philosophie der freien Weitergabe von (Quell)offener Software. Da der Quelltext der App teil der Bewertungsgrundlage ist und wir die Plattform Github verwenden war Open Source von Anfang an Teil des Entwicklungskonzeptes. Das erleichtert nicht nur die kooperative Arbeit an der App sondern bietet auch anderen Menschen die Möglichkeit den von uns erstellten Quellcode zum Lernen zu nutzen und weiterzuentwickeln.
 
-\subsubsection*{Lizenz}
+\subsection*{Lizenz}
 
 Wir haben uns für die G\+P\+Lv2 (G\+NU General Public License) entschieden, welche die Nutzung, Bearbeitung und Weitergabe des von uns erstellen Quellcodes regelt. Die G\+P\+Lv2 existiert bereits seit 1991 und ist einer der am weitesten verbreiteten Softwarelizenzen für freie Software. Sie gestattet es dem Lizenznehmer die Software frei zu verwenden, bearbeiten und weiterzuverbreiten. Sie verpflichtet den Lizenznehmer dabei die Software nur mit dem selbigen Lizenzmodell weiterzugeben was eine kommerzielle Nutzung unseres Quellcodes weitestgehend ausschließt. 
 
 \chapter{Arbeitsteilung}
-\subsection*{Programmierung}
+\section*{Programmierung}
 
 Oliver Friedrich\+: Beam Implementierung Marko Klepatz\+: Main Activity, Helper Klassen, Refactoring, Bug-\/\+Fixing Klaus Steinhauer\+: Android Kontakt Handeling
 
-\subsection*{Dokumentation}
+\section*{Dokumentation}
 
 Oliver Friedrich\+: U\+ML, Planung, Implementierung Marko Klepatz\+: Problemstellung, Quelltext Doku Klaus Steinhauer\+: Ziel, Einleitung, Anforderungen, Lizenz, Fazit 
 
 \chapter{Fazit und Ausblick}
-\subsection*{Fazit}
+\section{Fazit}
 
 Im Laufe des Semesters konnten wir einen guten Einblick in die Android Programmierung gewinnen. Unsere Aufgabenstellung hat weite Teilbereiche der Android A\+PI abgedeckt und bietet damit eine gute Grundlage um tiefer in die Materie einzudringen. Im Laufe des Semesters konnten wir Projektplanungs-\/ und Software-\/\+Engineering Kenntnisse aus den vergangenen Semestern praktisch anwenden und damit den planungsgemäßen Ablauf des Projektes sicherstellen. Trotz unterschiedlicher Vorkenntnisse in der Android Programmierung konnten wir uns alle gut in die Programmierung einbringen und jeder einzelne einen Teil beitragen.
 
-\subsection*{Ausblick}
+\section{Ausblick}
 
 Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kontaktbildern wäre wünschenswert, sofern der Speicherplatz der Karte dies zulässt, und auch andere frei wählbare v\+Card Felder wären denkbar. Sinvoll wäre zudem weitere Kartentypen zu unterstützen und die Kartensimulation in die Praxis umzusetzen. 
 
