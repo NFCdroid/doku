@@ -14,16 +14,16 @@
 \usepackage{textcomp}
 \usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
-
 % NLS support packages
 \usepackage[ngerman]{babel}
-
+\usepackage{tabularx}
 % Font selection
 \usepackage[T1]{fontenc}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
 \usepackage{sectsty}
+
 \renewcommand{\familydefault}{\sfdefault}
 \allsectionsfont{%
 	\fontseries{bc}\selectfont%
@@ -123,85 +123,137 @@
 	pdfencoding=unicode
 }
 \pagenumbering{roman}
+
+\date{\today}
+
 \begin{titlepage}
-	\vspace*{7cm}
-	\begin{center}%
-		{\Large N\+FC Tagger \\[1ex]\large 1.\+0 }\\
-		\vspace*{1cm}
-		{\large Erzeugt von Doxygen 1.8.11}\\
+	\begin{center}
+		
+		\textsc{\large Deutsche Telekom Hochschule für Telekommunikation Leipzig}
+		\\[2cm]
+		{\Large Dokumentation zum Modul Mobile Applikationen}
+		\\[1cm]
+		\begin{minipage}{0.2\textwidth}
+			\begin{flushleft}
+				{\footnotesize Thema}
+			\end{flushleft}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.75\textwidth}
+			\begin{flushleft}
+				\textbf{{\Large NFC Visitenkarten App}}
+			\end{flushleft}
+		\end{minipage}
+		\\[2cm]
+		\begin{minipage}{0.2\textwidth}
+			\begin{flushleft}
+				{\footnotesize vorgelegt von}
+			\end{flushleft}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.75\textwidth}
+			\begin{flushleft}
+				{\normalsize
+					Oliver Friedrich
+					\\Marko Klepatz
+					\\Klaus Steinhauer}
+			\end{flushleft}
+		\end{minipage}
+		\\[2cm]
+		\begin{minipage}{0.2\textwidth}
+			\begin{flushleft}
+				{\footnotesize Betreuer}
+			\end{flushleft}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.75\textwidth}
+			\begin{flushleft}
+				{\normalsize
+					Prof. Ulf Schemmert
+				}
+			\end{flushleft}
+		\end{minipage}
+		\vfill
+
+		
+		%\maketitle
 	\end{center}
-\end{titlepage}
-\clearemptydoublepage
-\tableofcontents
-\clearemptydoublepage
+	
 \pagenumbering{arabic}
+\tableofcontents
 \hypersetup{pageanchor=true}
 
 
-\chapter{Ziel}
-Bis zur Abgabe des Projektes zum Ende des WS 2015/16 soll eine App programmiert werden die Kontakte aus Android oder von einer Eingabemaske einlesen und auf eine N\+FC Karte speichern, sowie von der Karte lesen und in den Android Kontakten speichern kann. Zusätzlich sollen die Kontaktinformationen direkt zwischen zwei N\+FC fähigen Geräten kontaktlos ausgetauscht werden können. Dafür soll eine übersichtliche Oberfläche mit maximal vier Buttons erstellt werden und eine Hilfe für den Nutzer zur Verfügung stehen. Im Rahmen unseres Studiums der Wirtschaftsinformatik haben wir uns im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. Nach einer kurzen Einführung in die Android Programmierung durch Herrn Professor Schemmert lag es an den Studierenden sich für eines der vorgeschlagenen Projekte oder den Entwurf eines eigenen Projektes zu entscheiden. Wir haben uns dazu entschieden, eine von uns vorgeschlagene N\+FC App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. Wir werden das gesamte Projekt gemäß unserer in vorherigen Semestern erlernten Methoden planen und mit den erlernten Mitteln des Moduls Software-\/\+Engineering an die Implementierung herangehen.
+\chapter{Einleitung}
+\section{Einleitung}
+ Im Rahmen unseres Studiums der Wirtschaftsinformatik haben wir uns im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. Nach einer kurzen Einführung in die Android Programmierung durch Herrn Professor Schemmert lag es an den Studierenden sich für eines der vorgeschlagenen Projekte oder den Entwurf eines eigenen Projektes zu entscheiden. Wir haben uns dazu entschieden, eine von uns vorgeschlagene N\+FC App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. Wir werden das gesamte Projekt gemäß unserer in vorherigen Semestern erlernten Methoden planen und mit den erlernten Mitteln des Moduls Software-\/\+Engineering an die Implementierung herangehen.
 
 Im Folgenden soll unsere Herangehensweise, aufgetretene Schwierigkeiten und weitere Informationen aufgezeigt werden.
 
-\chapter{Einleitung}
-\subsection*{Motivation}
+\section{Motivation}
 
 Auf der Suche nach einer App mit praktischem Mehrwert und interessantem Inhalt haben wir uns für eine N\+FC App entschieden. Nachdem die anfängliche Idee eines Klonens der Hf\+TL Card, um ein Handy als Zugangsmedium zu den Räumen nutzen zu können, sich bald als unrealistisch herausstellte, haben wir uns entschieden eine Visitenkarten\+App für N\+FC Karten zu schreiben. Aufgrund der Preisentwicklung und umweltschonenden Eigenschaften von elektronischen Visitenkarten scheint ein \char`\"{}baldiges\char`\"{} Ersetzen der klassischen Visitenkarte aus Papier realistisch. Zudem werden Kontakte heute in der Regel digital gespeichert und verwaltet was ein analoges Austauschen von Daten redundant macht.
 
-\subsection*{Technische Einordnung}
+\section{Ziel}
+Bis zur Abgabe des Projektes zum Ende des WS 2015/16 soll eine App programmiert werden die Kontakte aus Android oder von einer Eingabemaske einlesen und auf eine N\+FC Karte speichern, sowie von der Karte lesen und in den Android Kontakten speichern kann. Zusätzlich sollen die Kontaktinformationen direkt zwischen zwei N\+FC fähigen Geräten kontaktlos ausgetauscht werden können. Dafür soll eine übersichtliche Oberfläche mit maximal vier Buttons erstellt werden und eine Hilfe für den Nutzer zur Verfügung stehen.
+
+
+\chapter{Technische Einordnung}
 
 N\+FC, kurz für \char`\"{}\+Near Field Communication\char`\"{}, ist eine auf R\+F\+ID (\char`\"{}radio-\/frequency identification\char`\"{}) basierende Technologie zur kontaktlosen Datenübertragung. Hierbei können die Daten auch \char`\"{}passiv\char`\"{} vorliegen, d.\+h. der N\+F\+C-\/\+Chip beinhaltet keine eigene Stromversorgung und wird erst durch ein \char`\"{}aktives\char`\"{} Lesegerät ausgelesen. Die Übertragung erfolgt per Funk innerhalb eines Frequenzbereichs 13,56 M\+Hz, hierbei ist eine maximale Datenübertragungsrate von 424 k\+Bit/s möglich, bei einer Reichweite von maximal 10 cm. Haupteinsatzbereiche sind kontaktloses Bezahlen und Zugangskontrolle, jeweils unter Einsatz eines verschlüsselten Datenbereiches, auf den der Zugriff mittels Challenge-\/\+Response-\/\+Verfahren erfolgt. Als Datenaustauschformat kommt meist N\+D\+EF (N\+FC data exchange format) zum Einsatz. Weitere Informationen zur Spezifikation von N\+F\+C-\/\+Karten können der I\+SO 7816 entnommen werden.
 
 Seit 2008 gibt es erste N\+F\+C-\/fähige Mobiltelefone. Ein großer Teil der aktuellen Android-\/\+Smartphones verfügt über einen integrierten N\+F\+C-\/\+Chip. Dieser beinhaltet bereits eigene Verschlüsselungscodes, stellt seine Funktionalität aber auch per Android A\+PI zur Verfügung. Zusätzlich zu der zuvor beschriebenen aktiv-\/passiv-\/\+Kopplung wurde mit \char`\"{}\+Android Beam\char`\"{} auch eine aktiv-\/aktiv-\/\+Kopplung zwischen zwei Android-\/\+Geräten eingeführt.
 
 Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene N\+F\+C-\/\+Modi bereitgestellt\+:
-\begin{DoxyItemize}
+\begin{itemize}
 \item Lesen/\+Schreiben von N\+D\+E\+F-\/\+Daten eines N\+F\+C-\/\+Chips (seit Android 2.\+3)
 \item Beamen von Daten zu anderen Androidgeräten mittels Android Beam (seit Android 4.\+0)
 \item Emulation eines N\+F\+C-\/\+Chips (\char`\"{}\+Host-\/based Card Emulation\char`\"{}, seit Android 4.\+4)
-\end{DoxyItemize}
+\end{itemize}
 
 Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten N\+F\+C-\/\+Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der N\+F\+C-\/\+Chip-\/\+Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung). Zu Testzwecken wurden wiederbeschreibbare N\+F\+C-\/\+Karten mit dem Chip N\+T\+AG 216 und 888 Byte Speicher beschafft. Als Test-\/ und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.\+1 und 6.\+0) sowie ein Samsung Galaxy S3 (Android 4.\+3). N\+F\+C\+Tagger ist eine App um Visitenkarten im V\+Card Format auf N\+FC Karten zu speichern, auszulesen und kontaktlos auszutauschen.
 
 \chapter{Anwenderdokumentation des N\+F\+C\+Taggers\+:}
-\subsection*{Unterstützte N\+FC Karten}
+\section{Unterstützte N\+FC Karten}
 
 Unterstützt werden alle Karten die das N\+D\+EF Format unterstützen. Sollte eine Karte nicht beschreibbar sein kontaktieren Sie uns bitte unter \href{mailto:marko.klepatz@hotmail.de}{\tt marko.\+klepatz@hotmail.\+de}
 
-\subsection*{Kontakte auf einer Karte Speichern}
+\section{Kontakte auf einer Karte Speichern}
 
 Sie können Kontakte entweder aus dem Android Kontaktbuch importieren oder manuell erstellen und auf einer N\+FC Karte speichern. Wählen Sie \char`\"{}\+Kontakt Import\char`\"{} um Daten aus dem Kontaktbuch zu importieren oder \char`\"{}\+V-\/\+Card Erstellen\char`\"{} um die Daten manuell einzugeben.
 
-\subsubsection*{Kontakt Import}
+\subsubsection{Kontakt Import}
 
 Wählen Sie einen beliebigen Kontakt zum Import. Nach erfolgtem Import können Sie die Daten mit \char`\"{}\+V-\/\+Card Erstellen\char`\"{} noch abändern und anschließend auf die Karte speichern.
 
-\subsubsection*{V-\/\+Card Erstellen}
+\subsubsection{V-\/\+Card Erstellen}
 
 Hier können Sie eigene Daten eingeben oder die vom Import eingefügten Daten bearbeiten. Legen Sie ihre N\+FC Karte auf die Rückseite des Gerätes und wählen Sie \char`\"{}\+Karte Beschreiben\char`\"{}. Alternativ können Sie die Daten auch übernehmen und per Android Beam an ein anderes Gerät senden.
 
-\subsection*{Kontakte von einer Karte lesen}
+\section{Kontakte von einer Karte lesen}
 
-Legen Sie die Karte einfach auf die Rückseite ihres Gerätes auf um die gespeicherten Daten angezeigt zu bekommen. \subsubsection*{Ausgelesenen Kontakt in Android Kontaktbuch Speichern}
+Legen Sie die Karte einfach auf die Rückseite ihres Gerätes auf um die gespeicherten Daten angezeigt zu bekommen. 
+
+\subsection{Ausgelesenen Kontakt in Android Kontaktbuch Speichern}
 
 Sie können den gelesenen Kontakt als neuen Kontakt speichern oder einen vorhandenen Kontakt ergänzen. Wählen Sie einen vorhandenen Kontakt oder das Plus um einen neuen zu erstellen.
 
-\subsection*{Android Beam}
+\subsection{Android Beam}
 
 Nach dem Erstellen, Auslesen oder Importieren eines Kontaktes können Sie diesen mit Android Beam an ein anderes Android Gerät übertragen. Halten Sie die Geräte mit dem Rücken aneinander und wählen Sie im Hauptdialog \char`\"{}\+Android Beam\char`\"{}. Bitte beachten Sie dass es zu Problemen kommen kann wenn die Geräte durch Hüllen geschützt sind.
 
-\subsection*{Einstellungen}
+\section{Einstellungen}
 
-\subsubsection*{Sprachausgabe}
+\subsection{Sprachausgabe}
 
-Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-\/to-\/\+Speech \subsubsection*{Vibration}
+Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-\/to-\/\+Speech \subsection{Vibration}
 
 De-\//\+Aktiviert die Vibration bei Erkennung einer neuen Karte. Ausgehend von unserer Zielformulierung und der Motivation ergeben sich einige funktionale und nicht funktionale Anforderungen. Zu den Funktionalen gehören das Lesen und Schreiben von Kontakten in Android, sowie der N\+FC Karte. Zudem soll es möglich sein die Daten Kontaktlos zu anderen Android Geräten übertragen zu können.
 
 \chapter{Anforderungen}
 Um die Akzeptanz der App und damit auch deren Verbreitung zu unterstützen ergeben sich Anforderungen an die optische Gestaltung der App. Sie sollte möglichst übersichtlich, intuitiv und auch adaptiv an die Gerätegröße gestaltet sein. Zusätzlich ist es uns wichtig, eine Dokumentation für den Nutzer zu erstellen die den nötigen Support auf ein Minimum reduziert und eine frustfreie Verwendung der App ermöglicht. 
 \chapter{Planung}
-\subsection*{Meilensteinplan}
+\subsection{Meilensteinplan}
 
 Wegen des fest vorgegebenen Semesterablaufes ist unsere Zeitplanung bereits weitestgehend festgelegt. Wie im Anhang \mbox{[}link\mbox{]} ersichtlich ist haben wir einen Projektabschluss zum 21.\+01.\+2016 geplant. Um den Fortschritt im Auge behalten zu können haben wir folgende Meilensteine geplant\+:
 
@@ -225,7 +277,7 @@ M6 &Projektabschluss &21.\+01.\+2016 \\\cline{1-3}
 \end{longtabu}
 
 
-\subsection*{Projektplan}
+\subsection{Projektplan}
 
 Zur besseren Aufgabenverteilung wurde zu jeder Aufgabe ein Verantwortlicher bestimmt, der sich um die Einhaltung der Fristen und Anforderungen dieser Aufgabe zu kümmern hatte. Dabei wurde versucht, die Aufgaben möglichst gleichmäßig zu verteilen.
 
@@ -265,7 +317,7 @@ Zur besseren Aufgabenverteilung wurde zu jeder Aufgabe ein Verantwortlicher best
 Trotz einiger unerwarteter Probleme konnte der aufgestellte Plan zum Großteil eingehalten werden. 
 
 \chapter{Software Engineering}
-\subsection*{Usecase Diagramm}
+\section{Usecase Diagramm}
 Zu Beginn des Projektes ist es wichtig, Klarheit über die benötigten Funktionalitäten zu schaffen. State-\/of-\/the-\/art ist hier das Erstellen eines Usecase-\/\+Diagramms um die für den Nutzer möglichen Usecases (=Anwendungsfälle) zu erfassen und die Programmierung darauf auszurichten. Hierbei ist insbesondere die Interaktion zwischen den Nutzern hervorzuheben. Beide nutzen die selbe App und sind in der Lage, Inhalte über Android Beam auszutauschen.  
 \graphicspath{ {../../UML/} }
 
@@ -274,7 +326,7 @@ Zu Beginn des Projektes ist es wichtig, Klarheit über die benötigten Funktiona
 \caption{Usecasediagramm}
 \end{figure}
 
-\subsection*{Activity Diagramm}
+\section{Activity Diagramm}
 
 Zu Beginn der Implementierung ist es wichtig, sich ausgehend vom Usecase Diagramm Klarheit über den logischen Aufbau der App zu machen, hier ist ein Aktivitätsdiagramm bestens geeignet. Hier werden auf übersichtliche Weise alle möglichen Bedienpfade der App aufgezeigt. Auch die innere Struktur der App ist entsprechend strukturiert.
 
@@ -285,7 +337,7 @@ Zu Beginn der Implementierung ist es wichtig, sich ausgehend vom Usecase Diagram
 \end{figure}
 
 
-\subsection*{Klassendiagramm}
+\section{Klassendiagramm}
 
 Nachdem die App auf die Bedienpfade abgestimmt wurde, ist es gute Praxis, die Funktionen logisch in verschiedene Klassen zu teilen. Anfangs wurde der Großteil in der Main Activity implementiert. Im Rahmen mehrerer Refactorings wurden immer mehr Funktionen in Klassen ausgelagert und diese in der Main Activity referenziert. Das zum Ende entstandene Klassendiagramm versucht die Abhängigkeit der Klassen untereinander aufzuzeigen.
 
@@ -296,21 +348,21 @@ Nachdem die App auf die Bedienpfade abgestimmt wurde, ist es gute Praxis, die Fu
 \end{figure}
 
 \chapter{Implementierung}
- \subsection*{Vorgehensweise}
+ \section*{Vorgehensweise}
 
-\subsubsection*{Extreme Programming}
+\subsection*{Extreme Programming}
 
 Das Team arbeitete mit den agilen Methoden des „\+Extreme Programming“ (XP). Die Entscheidung zur Anwendung dieser Methode ist hauptsächlich durch den Projekttypen und die zu Projektbeginn zur Verfügung stehenden Informationen bedingt. Da es sich um ein prototypisches Programmierprojekt handelt, war der Aufwand zur Implementierung einiger Funktionalitäten schwer abzuschätzen. Weiterhin war unser \char`\"{}\+Kunde\char`\"{}, Professor Schemmert, sehr gut verfügbar und auch in seinen Anforderungen flexibel. Voraussetzung für die erfolgreiche Durchführung des XP waren der Einsatz einer verteilten Versionsverwaltung (siehe nächster Abschnitt), kontinuierliches Testen auf unterschiedlichen Geräten sowie eine teilautomatisch generierte Dokumentation.
 
 Natürlich konnte nicht jede Technik genau nach diesem Modell angewandt werden, so waren beispielsweise „\+Stand Up Meetings“ nicht täglich sondern nur wöchentlich möglich. Das Durchführen von „\+Unit Tests“ war ebenfalls zeitlich nicht realisierbar, zukünftig könnten diese aber durch den Einsatz von \char`\"{}\+Continuous Integration\char`\"{} abgedeckt werden. Jedoch hat die X\+P-\/\+Technik des Pair-\/\+Programming immer wieder geholfen, Fehler, Lösungen und Code-\/\+Optimierungen schnell zu finden und zu realisieren. Auch der gegenseitige Wissenszuwachs, der in einem Hochschulprojekt mit im Vordergrund stehen sollte, war dadurch sehr groß.
 
-\subsubsection*{programmiertechnisches Vorgehen}
+\subsection{programmiertechnisches Vorgehen}
 
 Das Team ist programmiertechnisch folgendermaßen vorgegangen\+: Es wurde zunächst überlegt welche Klassen und Methoden implementiert werden müssen, nachdem diese realisiert wurden und im späteren Verlauf Abhängigkeiten entstanden, wurden diese agil hinzugefügt. Sollte eine Klasse oder Methode zu groß geworden sein, wurden diese durch Refactoring in dafür sinnvolle kleinere Klassen und Methoden ausgelagert. Wenn neue Elemente implementiert wurden, wurde danach oder dabei immer direkt getestet, somit konnten wir große Fehlprogrammierungen effektiv vermeiden.
 
 Am Ende des Projekts wurde noch ein großes Refactoring durchgeführt um dem Code eine gute Leserlichkeit zu verleihen. Dabei wurden unter anderem Klassen und Methoden ausgelagert um die Architektur zu verbessern und intuitiver zu gestalten. Des Weiteren wurden Tests durchgeführt um letzte Logikfehler zu beseitigen und die Speichereffizienz so wie die Performance zu steigern. Dabei bedienten wir uns unter anderem der Tools „\+Inspect Code“ und dem Ressourcenmonitor, welche in Android Studio integriert sind.
 
-\subsubsection*{technische Besonderheiten}
+\subsection{technische Besonderheiten}
 
 Im Verlauf der Entwicklung gab es einige technische Besonderheiten zu beachten. Einen guten Überblick dazu bietet ein Blick in die {\bfseries Android\+Manifest.\+xml} \begin{DoxyVerb}<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -414,7 +466,7 @@ Zur Kommunikation mit Bezahlterminals und Zugangssystemen verfügen Android Smar
 
 Zur Emulation von Karten kann auch das secure element verwendet werden, hierbei ist jedoch zwischen den unterschiedlichen N\+F\+C-\/\+Chips zu unterscheiden, da diese nicht jeden Kartentyp emulieren können.\+Zur Unterscheidung der N\+F\+C-\/\+Lesegeräte werden diese intern mit einer Typ-\/\+ID versehen und im Android-\/\+System entsprechend geroutet. Dieses Routing verhindert auch den weiteren Einsatz der Kartenemulation. Das Hauptproblem hierbei ist das statische Routing der A\+ID (application ID, z.\+B. des Lesegerätes) auf spezielle Apps. Wenn es zu der A\+ID des Lesegerätes keine im System registrierte App gibt, dann kommt der initiale Handshake zwischen emulierter Karte und Lesegerät nicht zustande . Der Großteil der Hersteller verwendet eigene A\+I\+Ds und stellt diese meist nicht zur Verfügung, weiterhin werden diese A\+I\+Ds vom Android-\/\+System zwar registriert, aber sind nicht ohne erheblichen Aufwand (Änderung der Berechtigungsdatei mit root-\/\+Rechten...) auszulesen. Folglich wäre es notwendig gewesen, die App auf mehrere A\+I\+Ds zu registrieren. Für die anfängliche Idee, die Hf\+T\+L-\/\+Zugangskarte zu emulieren, hätte selbst die Kenntnis der A\+ID nicht ausgereicht, da diese ein secure element beinhaltet und dieses von der H\+CE nicht abgedeckt werden kann. Ein weiteres Problem hinsichtlich der H\+CE ist auch eine mangelnde Testumgebung, für realistische Tests wäre die Anschaffung eines N\+F\+C-\/\+Lesegerätes unumgänglich gewesen, da der in Android integrierte N\+F\+C-\/\+Lesemodus zu generisch ist und sich nicht auf spezielle A\+I\+Ds beschränkt. Angenommen, die A\+ID steht zur Verfügung, dann kann eine Verbindung der emulierten Karte zum Lesegerät aufgebaut werden und der Datentransfer beginnt. Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine A\+P\+DU (Application Protocol Data Unit) an die emulierte Karte schickt und von dieser eine valide A\+P\+DU response erwartet. An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte A\+P\+DU response auszulesen. In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
 
-\subsection*{Entwicklungsmodell}
+\subsection{Entwicklungsmodell}
 
 Zur Umsetzung der Entwicklung wurde von Anfang an auf das verteilte Versionskontrollsystem git gesetzt. Ungetestete Funktionen wurden in Branches entwickelt und erst bei voller Funktion in den dadurch stabil gehaltenen Master integriert (\char`\"{}merged\char`\"{}). Falls dieser Master doch einen fehlerhaften Zustand aufwies, so ließ sich dieser problemlos aufgrund der Commit-\/\+Beschreibungen auf einen funktionierenden Stand zurücksetzen. Um dies zu vermeiden erfolgte das Hochladen (\char`\"{}\+Commit \& Push\char`\"{}) in den Master erst nach vorherigem Testen der App.
 
