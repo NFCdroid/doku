@@ -27,6 +27,7 @@ Hier wird die Dokumentation gepflegt.
 - [ ] Glossar
 - [ ] Anforderungen
 - [ ] Syntax-Highlighting
+- [ ] itemize mit weniger zeilenabstand
 
 ----
 
