@@ -231,8 +231,8 @@ Die Übertragung erfolgt per Funk innerhalb eines Frequenzbereichs 13,56 MHz, hi
 Haupteinsatzbereiche sind kontaktloses Bezahlen und Zugangskontrolle, jeweils unter Einsatz eines verschlüsselten Datenbereiches, auf den der Zugriff mittels Challenge-Response-Verfahren erfolgt. \\
 Als Datenaustauschformat kommt meist \ac{NDEF} zum Einsatz. Weitere Informationen zur Spezifikation von NFC-Karten können der ISO 7816 entnommen werden.\newline
 
-Seit 2008 gibt es erste NFC-\/fähige Mobiltelefone. Ein großer Teil der aktuellen Android-Smartphones verfügt über einen integrierten NFC-Chip. \\
-Dieser beinhaltet bereits eigene Verschlüsselungscodes, stellt seine Funktionalität aber auch per Android API zur Verfügung. Zusätzlich zu der zuvor beschriebenen aktiv-\/passiv-Kopplung wurde mit \char`\"{}Android Beam\char`\"{} auch eine aktiv-\/aktiv-Kopplung zwischen zwei Android-Geräten eingeführt.
+Seit 2008 gibt es erste NFC-fähige Mobiltelefone. Ein großer Teil der aktuellen Android-Smartphones verfügt über einen integrierten NFC-Chip. \\
+Dieser beinhaltet bereits eigene Verschlüsselungscodes, stellt seine Funktionalität aber auch per Android API zur Verfügung. Zusätzlich zu der zuvor beschriebenen aktiv-passiv-Kopplung wurde mit \char`\"{}Android Beam\char`\"{} auch eine aktiv-aktiv-Kopplung zwischen zwei Android-Geräten eingeführt.
 
 Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene NFC-Modi bereitgestellt:
 
@@ -242,11 +242,11 @@ Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene NFC-
 \setlist{itemsep=0pt}
 \item Lesen/Schreiben von NDEF-Daten eines NFC-Chips (seit Android 2.3)
 \item Beamen von Daten zu anderen Androidgeräten mittels Android Beam (seit Android 4.0)
-\item Emulation eines NFC-Chips (\char`\"{}Host-\/based Card Emulation\char`\"{}, seit Android 4.4)
+\item Emulation eines NFC-Chips (\char`\"{}Host-based Card Emulation\char`\"{}, seit Android 4.4)
 \end{enumerate}
 
 Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten NFC-Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
-Zu Testzwecken wurden wiederbeschreibbare NFC-Karten mit dem Chip NTAG 216 und 888 Byte Speicher beschafft. Als Test-\/ und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.1 und 6.0) sowie ein Samsung Galaxy S3 (Android 4.3). \\
+Zu Testzwecken wurden wiederbeschreibbare NFC-Karten mit dem Chip NTAG 216 und 888 Byte Speicher beschafft. Als Test- und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.1 und 6.0) sowie ein Samsung Galaxy S3 (Android 4.3). \\
 NFCTagger ist eine App um Visitenkarten im vCard Format auf NFC Karten zu speichern, auszulesen und kontaktlos auszutauschen.
 
 \chapter{Anwenderdokumentation des NFCTaggers:}
@@ -282,9 +282,9 @@ Nach dem Erstellen, Auslesen oder Importieren eines Kontaktes können Sie diesen
 
 \subsection{Sprachausgabe}
 
-Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-\/to-Speech \subsection{Vibration}
+Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-to-Speech \subsection{Vibration}
 
-De-\//Aktiviert die Vibration bei Erkennung einer neuen Karte. Ausgehend von unserer Zielformulierung und der Motivation ergeben sich einige funktionale und nicht funktionale Anforderungen. Zu den Funktionalen gehören das Lesen und Schreiben von Kontakten in Android, sowie der NFC Karte. Zudem soll es möglich sein die Daten Kontaktlos zu anderen Android Geräten übertragen zu können.
+De-/Aktiviert die Vibration bei Erkennung einer neuen Karte. Ausgehend von unserer Zielformulierung und der Motivation ergeben sich einige funktionale und nicht funktionale Anforderungen. Zu den Funktionalen gehören das Lesen und Schreiben von Kontakten in Android, sowie der NFC Karte. Zudem soll es möglich sein die Daten Kontaktlos zu anderen Android Geräten übertragen zu können.
  
 \chapter{Planung}
 \section{Meilensteinplan}
@@ -331,7 +331,7 @@ Zur besseren Aufgabenverteilung wurde zu jeder Aufgabe ein Verantwortlicher best
 	303 &Projektabschlussbericht erstellen &17.12.15 &14.01.16 &21 &Oliver Friedrich &12 \\\cline{1-7}
 	300 &Anwenderdokumentation erstellen &17.12.15 &28.12.15 &8 &Marko Klepatz &12.1 \\\cline{1-7}
 	318 &Klassendokumentation generieren &29.12.15 &06.01.16 &7 &Oliver Friedrich &12.2 \\\cline{1-7}
-	319 &Fehler-\/ und Problembetrachtung &07.01.16 &14.01.16 &6 &Klaus Steinhauer &12.3 \\\cline{1-7}
+	319 &Fehler- und Problembetrachtung &07.01.16 &14.01.16 &6 &Klaus Steinhauer &12.3 \\\cline{1-7}
 	308 &{\bfseries Projektabschlussbericht erstellt} &15.01.16 &15.01.16 &0 &Marko Klepatz &13 \\\cline{1-7}
 	310 &Projektpraesentation erstellen &15.01.16 &21.01.16 &5 &Klaus Steinhauer &14 \\\cline{1-7}
 	314 &Projektabschluss vorbereiten &15.01.16 &21.01.16 &5 &Oliver Friedrich &15 \\\cline{1-7}
@@ -341,7 +341,7 @@ Trotz einiger unerwarteter Probleme konnte der aufgestellte Plan zum Großteil e
 
 \chapter{Software Engineering}
 \section{Usecase Diagramm}
-Zu Beginn des Projektes ist es wichtig, Klarheit über die benötigten Funktionalitäten zu schaffen. State-\/of-\/the-\/art ist hier das Erstellen eines Usecase-Diagramms um die für den Nutzer möglichen Anwendungsfälle zu erfassen und die Programmierung darauf auszurichten. Hierbei ist insbesondere die Interaktion zwischen den Nutzern hervorzuheben. Beide nutzen die selbe App und sind in der Lage, Inhalte über Android Beam auszutauschen.  
+Zu Beginn des Projektes ist es wichtig, Klarheit über die benötigten Funktionalitäten zu schaffen. State-of-the-art ist hier das Erstellen eines Usecase-Diagramms um die für den Nutzer möglichen Anwendungsfälle zu erfassen und die Programmierung darauf auszurichten. Hierbei ist insbesondere die Interaktion zwischen den Nutzern hervorzuheben. Beide nutzen die selbe App und sind in der Lage, Inhalte über Android Beam auszutauschen.  
 
 \graphicspath{ {./UML/} }
 
@@ -454,7 +454,7 @@ Wir haben uns bewusst gegen einen generischen MIME-Typ entschieden und stattdess
 \end{DoxyVerb}
 
 
-Eine weitere Besonderheit ist das systemweite Eintragen der App als Empfänger für geteilte Kontakte. Dazu wird die App auf den zu empfangenden MIME-Typ, hier für das Standard vCard-Format, registriert und kann nun den vCard-\/senden-Intent des Systems empfangen.
+Eine weitere Besonderheit ist das systemweite Eintragen der App als Empfänger für geteilte Kontakte. Dazu wird die App auf den zu empfangenden MIME-Typ, hier für das Standard vCard-Format, registriert und kann nun den vCard-senden-Intent des Systems empfangen.
 
 \begin{DoxyVerb}            <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -539,7 +539,7 @@ Klaus Steinhauer: Ziel, Einleitung, Anforderungen, Lizenz, Fazit\\
 \chapter{Fazit und Ausblick}
 
 Im Laufe des Semesters konnten wir einen guten Einblick in die Android Programmierung gewinnen. Unsere Aufgabenstellung hat weite Teilbereiche der Android API abgedeckt und bietet damit eine gute Grundlage um tiefer in die Materie einzudringen. \\
-Im Laufe des Semesters konnten wir Projektplanungs-\/ und Software-Engineering Kenntnisse aus den vergangenen Semestern praktisch anwenden und damit den planungsgemäßen Ablauf des Projektes sicherstellen.\\ 
+Im Laufe des Semesters konnten wir Projektplanungs- und Software-Engineering Kenntnisse aus den vergangenen Semestern praktisch anwenden und damit den planungsgemäßen Ablauf des Projektes sicherstellen.\\ 
 Trotz unterschiedlicher Vorkenntnisse in der Android Programmierung konnten wir uns alle gut in die Programmierung einbringen und jeder einzelne einen Teil beitragen.
 
 \section{Ausblick}
