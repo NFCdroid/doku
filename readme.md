@@ -5,9 +5,9 @@ Hier wird die Dokumentation gepflegt.
 ## TODO
 - [ ] Präsentation vorbereiten, Themen: Funktionen, NFC, Ablauf (5 min) @ohli, @MarkoKle
 - [x] Doxygen als Anhang
-- [ ] Quellen
+- [x] Quellen
 - [x] Formatierung und TeXen.
-- [ ] Tabellen umbrechen
+- [x] Tabellen umbrechen
 - [x] Glossar
 - [ ] Anforderungen
 - [x] itemize mit weniger zeilenabstand
