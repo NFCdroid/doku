@@ -1,4 +1,4 @@
-\documentclass[a4paper,ngerman,12pt]{scrreprt}
+\documentclass[a4paper,ngerman,12pt]{report}
 
 % Packages required by doxygen
 \usepackage{fixltx2e}
@@ -95,6 +95,10 @@
 \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
 
 %===== C O N T E N T S =====
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 
 \begin{document}
 
@@ -191,24 +195,24 @@
 
 \pagenumbering{arabic}
 \begingroup
-\renewcommand*{\chapterpagestyle}{empty}
+%\renewcommand*{\chapterpagestyle}{empty}
 \pagestyle{empty}
 \tableofcontents
 \clearpage
 \endgroup
 
 \chapter{Einleitung}
- Im Rahmen unseres Studiums der Wirtschaftsinformatik haben wir uns im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. \\
+ Im Rahmen unseres Studiums der Wirtschaftsinformatik haben die schreibenden im 5. Semester für die Profilierung Mobile Applikationen entschieden. Hauptbestandteil und auch prüfungsrelevant für das Modul ist das eigenständige Planen und Implementieren einer Android App. \\
  Nach einer kurzen Einführung in die Android Programmierung durch Herrn Professor Schemmert lag es an den Studierenden sich für eines der vorgeschlagenen Projekte oder den Entwurf eines eigenen Projektes zu entscheiden. \\
- Wir haben uns dazu entschieden, eine von uns vorgeschlagene \ac{NFC} App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. \newline
+ Die Autoren habe sich entschieden eine selbst vorgeschlagene \ac{NFC} App zu programmieren. Diese wurde nach einer kurzen Rücksprache mit Herrn Professor Schemmert genehmigt. \newline
  Wir werden das gesamte Projekt gemäß unserer in vorherigen Semestern erlernten Methoden planen und mit den erlernten Mitteln des Moduls Software-Engineering an die Implementierung herangehen.
 
-Im Folgenden soll unsere Herangehensweise, aufgetretene Schwierigkeiten und weitere Informationen aufgezeigt werden.
+Im Folgenden soll die Herangehensweise, aufgetretene Schwierigkeiten und weitere Informationen aufgezeigt werden.
 
 \section{Motivation}
 
-Auf der Suche nach einer App mit praktischem Mehrwert und interessantem Inhalt haben wir uns für eine NFC App entschieden. \\
-Nachdem die anfängliche Idee eines Klonens der HfTL Card, um ein Handy als Zugangsmedium zu den Räumen nutzen zu können, sich bald als unrealistisch herausstellte, haben wir uns entschieden eine VisitenkartenApp für NFC Karten zu schreiben. \\
+Auf der Suche nach einer App mit praktischem Mehrwert und interessantem Inhalt hat die Gruppe sich für eine NFC App entschieden. \\
+Nachdem die anfängliche Idee eines Klonens der HfTL Card, um ein Handy als Zugangsmedium zu den Räumen nutzen zu können, sich bald als unrealistisch herausstellte, haben die schreibenden sich entschieden eine VisitenkartenApp für NFC Karten zu schreiben. \\
 Aufgrund der Preisentwicklung und umweltschonenden Eigenschaften von elektronischen Visitenkarten scheint ein \char`\"{}baldiges\char`\"{} Ersetzen der klassischen Visitenkarte aus Papier realistisch. Zudem werden Kontakte heute in der Regel digital gespeichert und verwaltet was ein analoges Austauschen von Daten redundant macht.
 
 \section{Ziel}
@@ -220,7 +224,7 @@ Ausgehend von unserer Zielformulierung und der Motivation ergeben sich einige fu
 Zu den Funktionalen gehören das Lesen und Schreiben von Kontakten in Android, sowie der NFC Karte.
 Zudem soll es möglich sein die Daten Kontaktlos zu anderen Android Geräten übertragen zu können.\newline
 
-Um die Akzeptanz der App und damit auch deren Verbreitung zu unterstützen ergeben sich Anforderungen an die optische Gestaltung der App. Sie sollte möglichst übersichtlich, intuitiv und auch adaptiv an die Gerätegröße gestaltet sein. Zusätzlich ist es uns wichtig, eine Dokumentation für den Nutzer zu erstellen die den nötigen Support auf ein Minimum reduziert und eine frustfreie Verwendung der App ermöglicht.
+Um die Akzeptanz der App und damit auch deren Verbreitung zu unterstützen ergeben sich Anforderungen an die optische Gestaltung der App. Sie sollte möglichst übersichtlich, intuitiv und auch adaptiv an die Gerätegröße gestaltet sein. Zusätzlich ist es den Autoren wichtig, eine Dokumentation für den Nutzer zu erstellen die den nötigen Support auf ein Minimum reduziert und eine frustfreie Verwendung der App ermöglicht.
 
 
 \chapter{Technische Einordnung}
@@ -245,14 +249,14 @@ Laut offizieller Android Entwicklungsdokumentation werden drei verschiedene NFC-
 \item Emulation eines NFC-Chips (\char`\"{}Host-based Card Emulation\char`\"{}, seit Android 4.4)
 \end{enumerate}
 
-Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten NFC-Technologien geplant, jedoch konnten wir nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
+Im Rahmen dieser Projektarbeit war die Implementierung aller drei genannten NFC-Technologien geplant, jedoch konnten die Autoren nur das Lesen und Beamen umsetzen, da es bei der NFC-Chip-Emulation zu unerwarteten Problemen kam (siehe Problembetrachtung).\\ 
 Zu Testzwecken wurden wiederbeschreibbare NFC-Karten mit dem Chip NTAG 216 und 888 Byte Speicher beschafft. Als Test- und Entwicklungsgeräte dienten zwei Samsung Galaxy S5 (Android 5.1 und 6.0) sowie ein Samsung Galaxy S3 (Android 4.3). \\
 NFCTagger ist eine App um Visitenkarten im vCard Format auf NFC Karten zu speichern, auszulesen und kontaktlos auszutauschen.
 
 \chapter{Anwenderdokumentation des NFCTaggers:}
 \section{Unterstützte NFC Karten}
 
-Unterstützt werden alle Karten die das NDEF Format unterstützen. Sollte eine Karte nicht beschreibbar sein kontaktieren Sie uns bitte unter \href{mailto:marko.klepatz@hotmail.de}{\tt marko.klepatz@hotmail.de}
+Unterstützt werden alle Karten die das NDEF Format unterstützen. Sollte eine Karte nicht beschreibbar sein kontaktieren Sie uns bitte unter \href{mailto:markoklepatz@hotmail.de}{\tt marko.klepatz@hotmail.de}
 
 \section{Kontakte auf einer Karte speichern}
 
@@ -282,14 +286,15 @@ Nach dem Erstellen, Auslesen oder Importieren eines Kontaktes können Sie diesen
 
 \subsection{Sprachausgabe}
 
-Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-to-Speech \subsection{Vibration}
+Liest Hinweistexte zur Interaktion mit der App vor. Nutzt Google Text-to-Speech 
+\subsection{Vibration}
 
-De-/Aktiviert die Vibration bei Erkennung einer neuen Karte. Ausgehend von unserer Zielformulierung und der Motivation ergeben sich einige funktionale und nicht funktionale Anforderungen. Zu den Funktionalen gehören das Lesen und Schreiben von Kontakten in Android, sowie der NFC Karte. Zudem soll es möglich sein die Daten Kontaktlos zu anderen Android Geräten übertragen zu können.
+De-/Aktiviert die Vibration bei Erkennung einer neuen Karte. 
  
 \chapter{Planung}
 \section{Meilensteinplan}
 
-Wegen des fest vorgegebenen Semesterablaufes ist unsere Zeitplanung bereits weitestgehend festgelegt. Wie in der Projektplanung ersichtlich ist haben wir einen Projektabschluss zum 21.01.2016 geplant. Um den Fortschritt im Auge behalten zu können haben wir folgende Meilensteine geplant:
+Wegen des fest vorgegebenen Semesterablaufes ist die Zeitplanung bereits weitestgehend festgelegt. Wie in der Projektplanung ersichtlich ist ist ein Projektabschluss zum 21.01.2016 geplant. Um den Fortschritt im Auge behalten zu können wurden die folgende Meilensteine geplant:
 
 \begin{TabularC}{3}
 	\hline
@@ -376,7 +381,7 @@ Nachdem die App auf die Bedienpfade abgestimmt wurde, ist es gute Praxis, die Fu
 \subsection{Extreme Programming}
 
 Das Team arbeitete mit den agilen Methoden des „Extreme Programming“ (XP). Die Entscheidung zur Anwendung dieser Methode ist hauptsächlich durch den Projekttypen und die zu Projektbeginn zur Verfügung stehenden Informationen bedingt. \\
-Da es sich um ein prototypisches Programmierprojekt handelt, war der Aufwand zur Implementierung einiger Funktionalitäten schwer abzuschätzen. Weiterhin war unser \char`\"{}Kunde\char`\"{}, Professor Schemmert, sehr gut verfügbar und auch in seinen Anforderungen flexibel.\\ Voraussetzung für die erfolgreiche Durchführung des XP waren der Einsatz einer verteilten Versionsverwaltung (siehe nächster Abschnitt), kontinuierliches Testen auf unterschiedlichen Geräten sowie eine teilautomatisch generierte Dokumentation.
+Da es sich um ein prototypisches Programmierprojekt handelt, war der Aufwand zur Implementierung einiger Funktionalitäten schwer abzuschätzen. Weiterhin war der \char`\"{}Kunde\char`\"{}, Professor Schemmert, sehr gut verfügbar und auch in seinen Anforderungen flexibel.\\ Voraussetzung für die erfolgreiche Durchführung des XP waren der Einsatz einer verteilten Versionsverwaltung (siehe nächster Abschnitt), kontinuierliches Testen auf unterschiedlichen Geräten sowie eine teilautomatisch generierte Dokumentation.
 
 Natürlich konnte nicht jede Technik genau nach diesem Modell angewandt werden, so waren beispielsweise „Stand Up Meetings“ nicht täglich sondern nur wöchentlich möglich.\\ 
 Das Durchführen von „Unit Tests“ war ebenfalls zeitlich nicht realisierbar, zukünftig könnten diese aber durch den Einsatz von \char`\"{}\ac{Continuous Integration}\char`\"{} abgedeckt werden. \\
@@ -386,10 +391,10 @@ Auch der gegenseitige bedingte Wissenszuwachs, der in einem Hochschulprojekt mit
 \subsection{programmiertechnisches Vorgehen}
 
 Das Team ist programmiertechnisch folgendermaßen vorgegangen: Es wurde zunächst überlegt welche Klassen und Methoden implementiert werden müssen, nachdem diese realisiert wurden und im späteren Verlauf Abhängigkeiten entstanden, wurden diese agil hinzugefügt. \\
-Sollte eine Klasse oder Methode zu groß geworden sein, wurden diese durch \ac{Refactoring} in dafür sinnvolle kleinere Klassen und Methoden ausgelagert. Wenn neue Elemente implementiert wurden, wurde danach oder dabei immer direkt getestet, somit konnten wir große Fehlprogrammierungen effektiv vermeiden.
+Sollte eine Klasse oder Methode zu groß geworden sein, wurden diese durch \ac{Refactoring} in dafür sinnvolle kleinere Klassen und Methoden ausgelagert. Wenn neue Elemente implementiert wurden, wurde danach oder dabei immer direkt getestet, somit konnten große Fehlprogrammierungen effektiv vermieden werden.
 
 Am Ende des Projekts wurde noch ein großes Refactoring durchgeführt um dem Code eine gute Leserlichkeit zu verleihen. Dabei wurden unter anderem Klassen und Methoden ausgelagert um die Architektur zu verbessern und intuitiver zu gestalten. \\
-Des Weiteren wurden Tests durchgeführt um letzte Logikfehler zu beseitigen und die Speichereffizienz so wie die Performance zu steigern. Dabei bedienten wir uns unter anderem der Tools „Inspect Code“ und dem Ressourcenmonitor, welche in Android Studio integriert sind.
+Des Weiteren wurden Tests durchgeführt um letzte Logikfehler zu beseitigen und die Speichereffizienz so wie die Performance zu steigern. Dabei bedienten die Autoren sich unter anderem der Tools „Inspect Code“ und dem Ressourcenmonitor, welche in Android Studio integriert sind.
 
 \section{Technische Besonderheiten}
 
@@ -432,7 +437,7 @@ Hier erhält die App Zugriff auf den NFC-Chip. \begin{DoxyVerb}    <uses-feature
 
 Zum Schreiben von NDEF-Daten müssen die Daten auf dem Chip mit einem speziellen MIME-Typ gespeichert werden. So können Kontaktdaten mit dem Standard-vCard MIME Typ geschrieben werden und das Android System verwaltet automatisch die damit registrierten Anwendungen, so würde sich in diesem Fall jede mit vCard registrierte App öffnen lassen, z.B. die Android Kontakte-App.
 
-Wir haben uns bewusst gegen einen generischen MIME-Typ entschieden und stattdessen unseren eigenen gebaut:  application/vnd.com.ag.mk.nfccardreadwrite.beam. Ein praktischer Nebeneffekt ist die auf einigen Geräten existierende Verknüpfung unbekannter MIME-Typen mit dem Google PlayStore. Hierbei ist es möglich, die App nur durch Auflegen auf eine NFC-Karte aus dem PlayStore herunterzuladen, da nur diese den von uns defninierten MIME-Typ unterstützt. \begin{DoxyVerb}                <data android:mimeType="application/vnd.com.ag.mk.nfccardreadwrite.beam" />
+Es wurde sich bewusst gegen einen generischen MIME-Typ entschieden und stattdessen eine eigenen gebaut:  application/vnd.com.ag.mk.nfccardreadwrite.beam. Ein praktischer Nebeneffekt ist die auf einigen Geräten existierende Verknüpfung unbekannter MIME-Typen mit dem Google PlayStore. Hierbei ist es möglich, die App nur durch Auflegen auf eine NFC-Karte aus dem PlayStore herunterzuladen, da nur diese den von den Autoren defninierten MIME-Typ unterstützt. \begin{DoxyVerb}                <data android:mimeType="application/vnd.com.ag.mk.nfccardreadwrite.beam" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
@@ -475,11 +480,11 @@ Eine weitere Besonderheit ist das systemweite Eintragen der App als Empfänger f
 \end{DoxyVerb}
 
 
-Natürlich wäre es ohne weiteres möglich gewesen, unsere App auf den generischen vCard-MIME-Typ zu registrieren, intern handelt es sich um die gleiche Datenstruktur. Allerdings haben wir uns an dieser Stelle für den \char`\"{}exklusiveren\char`\"{} Weg entschieden.
+Natürlich wäre es ohne weiteres möglich gewesen, die App auf den generischen vCard-MIME-Typ zu registrieren, intern handelt es sich um die gleiche Datenstruktur. Allerdings haben die Autoren sich an dieser Stelle für den \char`\"{}exklusiveren\char`\"{} Weg entschieden.
 
 \section{Dokumentation}
 
-Für die Dokumentation unserer Arbeit haben wir verschiedene Teilautomatische Open Source Lösungen verwendet. Zum Erstellen der Java Dokumentation haben wir Doxygen genutzt. Zum Erstellen der UML Diagramme plantuml, welches die Möglichkeit bietet, UML Diagramme mittels einfacher Textbeschreibung automatisiert zu erstellen. Beide Tools bieten unter anderem LaTeX Dokumente als Ausgabeformat, welche wir als Basis für unsere Dokumentation verwendeten.
+Für die Dokumentation der Arbeit haben wurden verschiedene Teilautomatische Open Source Lösungen verwendet. Zum Erstellen der Java Dokumentation wurde Doxygen genutzt. Zum Erstellen der UML Diagramme plantuml, welches die Möglichkeit bietet, UML Diagramme mittels einfacher Textbeschreibung automatisiert zu erstellen. Beide Tools bieten unter anderem LaTeX Dokumente als Ausgabeformat, welche als Basis für die Dokumentation dient.
 
 \section{Problembetrachtung}
 
@@ -498,13 +503,13 @@ Es kann nur die Route zum und vom Secure Element angesprochen werden, d.h. die D
 
 Zur Emulation von Karten kann auch das Secure Element des Gerätes verwendet werden, hierbei ist jedoch zwischen den unterschiedlichen NFC-Chips zu unterscheiden, da diese nicht jeden Kartentyp emulieren können.\\
 Zur Unterscheidung der NFC-Lesegeräte werden diese intern mit einer Typ-ID versehen und im Android-System entsprechend geroutet. Dieses Routing verhindert auch den weiteren Einsatz der Kartenemulation.\\ Das Hauptproblem hierbei ist das statische Routing der \ac{AID} auf spezielle Apps. 
-Wenn es zu der AID des Lesegerätes keine im System registrierte App gibt, dann kommt der initiale Handshake zwischen emulierter Karte und Lesegerät nicht zustande. 
+Wenn es zu der AID des Lesegerätes keine im System registrierte App gibt,  kommt der initiale Handshake zwischen emulierter Karte und Lesegerät nicht zustande. 
 Der Großteil der Hersteller verwendet eigene AIDs und stellt diese meist nicht zur Verfügung, weiterhin werden diese AIDs vom Android-System zwar registriert, aber sind nicht ohne erheblichen Aufwand (Änderung der Berechtigungsdatei mit root-Rechten...) auszulesen. \\
 Folglich wäre es notwendig gewesen, die App auf mehrere AIDs zu registrieren. Für die anfängliche Idee, die HfTL-Zugangskarte zu emulieren, hätte selbst die Kenntnis der AID nicht ausgereicht, da diese ein Secure Element beinhaltet und dieses von der \ac{HCE} nicht abgedeckt werden kann. \newpage
 Ein weiteres Problem hinsichtlich der \ac{HCE} ist auch eine mangelnde Testumgebung, für realistische Tests wäre die Anschaffung eines NFC-Lesegerätes unumgänglich gewesen, da der in Android integrierte NFC-Lesemodus zu generisch ist und sich nicht auf spezielle AIDs beschränkt. \\
 Angenommen, die AID steht zur Verfügung, dann kann eine Verbindung der emulierten Karte zum Lesegerät aufgebaut werden und der Datentransfer beginnt. 
 Im Anschluss ist ein weiteres Problem zu erwarten, da das Lesegerät eine \ac{APDU} an die emulierte Karte schickt und von dieser eine valide APDU Response erwartet. \\
-An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte APDU Response auszulesen. In Anbetracht dieser technischen Einschränkungen haben wir uns gegen die Implementierung der Kartenemulation entschieden.
+An dieser Stelle wäre erneut die Manipulation einer validen Verbindung nötig gewesen um die korrekte APDU Response auszulesen. In Anbetracht dieser technischen Einschränkungen haben die Autoren sich gegen die Implementierung der Kartenemulation entschieden.
 
 \section{Entwicklungsmodell}
 
@@ -517,11 +522,11 @@ Jedes Fehlerticket (Tag: \char`\"{}bug\char`\"{}) enthält eine Beschreibung des
 
 \chapter{Open Source und Lizenz}
 \subsection*{Open Source}
-Die Ersteller der App arbeiten alle mit Linux und unterstützen dessen Philosophie der freien Weitergabe von (Quell)offener Software. Da der Quelltext der App teil der Bewertungsgrundlage ist und wir die Plattform Github verwenden war Open Source von Anfang an Teil des Entwicklungskonzeptes. Das erleichtert nicht nur die kooperative Arbeit an der App sondern bietet auch anderen Menschen die Möglichkeit den von uns erstellten Quellcode zum Lernen zu nutzen und weiterzuentwickeln.
+Die Ersteller der App arbeiten alle mit Linux und unterstützen dessen Philosophie der freien Weitergabe von (Quell)offener Software. Da der Quelltext der App teil der Bewertungsgrundlage ist und die Plattform Github verwendet wurde war Open Source von Anfang an Teil des Entwicklungskonzeptes. Das erleichtert nicht nur die kooperative Arbeit an der App sondern bietet auch anderen Menschen die Möglichkeit den erstellten Quellcode zum Lernen zu nutzen und weiterzuentwickeln.
 
 \subsection*{Lizenz}
 
-Wir haben uns für die GPLv2 (GNU General Public License) entschieden, welche die Nutzung, Bearbeitung und Weitergabe des von uns erstellen Quellcodes regelt. Die GPLv2 existiert bereits seit 1991 und ist einer der am weitesten verbreiteten Softwarelizenzen für freie Software. Sie gestattet es dem Lizenznehmer die Software frei zu verwenden, bearbeiten und weiterzuverbreiten. Sie verpflichtet den Lizenznehmer dabei die Software nur mit dem selbigen Lizenzmodell weiterzugeben was eine kommerzielle Nutzung unseres Quellcodes weitestgehend ausschließt. 
+Die Autoren haben sich für die GPLv2 (GNU General Public License) entschieden, welche die Nutzung, Bearbeitung und Weitergabe des erstellen Quellcodes regelt. Die GPLv2 existiert bereits seit 1991 und ist einer der am weitesten verbreiteten Softwarelizenzen für freie Software. Sie gestattet es dem Lizenznehmer die Software frei zu verwenden, bearbeiten und weiterzuverbreiten. Sie verpflichtet den Lizenznehmer dabei die Software nur mit dem selbigen Lizenzmodell weiterzugeben was eine kommerzielle Nutzung unseres Quellcodes weitestgehend ausschließt. 
 
 \chapter{Arbeitsteilung}
 \section*{Programmierung}
@@ -538,9 +543,9 @@ Klaus Steinhauer: Ziel, Einleitung, Anforderungen, Lizenz, Fazit\\
 
 \chapter{Fazit und Ausblick}
 
-Im Laufe des Semesters konnten wir einen guten Einblick in die Android Programmierung gewinnen. Unsere Aufgabenstellung hat weite Teilbereiche der Android API abgedeckt und bietet damit eine gute Grundlage um tiefer in die Materie einzudringen. \\
-Im Laufe des Semesters konnten wir Projektplanungs- und Software-Engineering Kenntnisse aus den vergangenen Semestern praktisch anwenden und damit den planungsgemäßen Ablauf des Projektes sicherstellen.\\ 
-Trotz unterschiedlicher Vorkenntnisse in der Android Programmierung konnten wir uns alle gut in die Programmierung einbringen und jeder einzelne einen Teil beitragen.
+Im Laufe des Semesters konnten eine guter Einblick in die Android Programmierung gewonnen werden. Die Aufgabenstellung hat weite Teilbereiche der Android API abgedeckt und bietet damit eine gute Grundlage um tiefer in die Materie einzudringen. \\
+Im Laufe des Semesters konnten Projektplanungs- und Software-Engineering Kenntnisse aus den vergangenen Semestern praktisch anwendet werden und damit der plangemäße Ablauf des Projektes sichergestellt werden.\\ 
+Trotz unterschiedlicher Vorkenntnisse in der Android Programmierung konnten sich alle Beteiligten gut in die Programmierung einbringen und jeder einzelne einen Teil beitragen.
 
 \section{Ausblick}
 
@@ -590,11 +595,11 @@ Die App ließe sich auf verschiedene Weisen erweitern. Das Unterstützen von Kon
 \input{\CommonPath/classdialogs_1_1_contact_list_dialog}
 \input{\CommonPath/classtools_1_1_contact_tools}
 \input{\CommonPath/classactivity_1_1_create_v_card_activity}
-\input{\CommonPath/classtools_1_1_data_work}
 \input{\CommonPath/classactivity_1_1_main_activity}
 \input{\CommonPath/classtools_1_1_nfc_tools}
 \input{\CommonPath/classdialogs_1_1_settings_dialog}
 \input{\CommonPath/classtools_1_1_v_card_format_tools}
+\input{\CommonPath/classaddons_1_1_data_work}
 \input{\CommonPath/classaddons_1_1_vibration}
 \input{\CommonPath/classaddons_1_1_voice}
 %--- End generated contents ---
