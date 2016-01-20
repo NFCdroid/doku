@@ -18,7 +18,7 @@ doxygen/latex/
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
+ *.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -164,3 +164,4 @@ doxygen/latex/
 .idea/
 
 selbsterkl.pdf
+final.pdf
